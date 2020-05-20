@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Kameron Ingrando</title>
-    <link>http://example.org/posts/</link>
+    <link>https://happy-island-07212b110.azurestaticapps.net/posts/</link>
     <description>Recent content in Posts on Kameron Ingrando</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2020 Kameron Ingrando</copyright>
     <lastBuildDate>Tue, 19 May 2020 18:12:59 -0500</lastBuildDate>
     
-	<atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://happy-island-07212b110.azurestaticapps.net/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Testpost</title>
-      <link>http://example.org/posts/testpost/</link>
+      <link>https://happy-island-07212b110.azurestaticapps.net/posts/testpost/</link>
       <pubDate>Tue, 19 May 2020 18:08:46 -0500</pubDate>
       
-      <guid>http://example.org/posts/testpost/</guid>
+      <guid>https://happy-island-07212b110.azurestaticapps.net/posts/testpost/</guid>
       <description></description>
     </item>
     
