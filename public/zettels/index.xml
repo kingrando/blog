@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zettels on Kameron Ingrando</title>
+    <link>http://example.org/zettels/</link>
+    <description>Recent content in Zettels on Kameron Ingrando</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2020 Kameron Ingrando</copyright>
+    <lastBuildDate>Tue, 19 May 2020 18:12:18 -0500</lastBuildDate>
+    
+	<atom:link href="http://example.org/zettels/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Source Of What Motivates Us</title>
+      <link>http://example.org/zettels/the-source-of-what-motivates-us/</link>
+      <pubDate>Wed, 20 May 2020 15:27:27 -0500</pubDate>
+      
+      <guid>http://example.org/zettels/the-source-of-what-motivates-us/</guid>
+      <description>Research has shown that the striatum, which is a part of the basal ganglia, is heavily involved in our motivation system. When something happens to this part of the brain, we seem to become apathetic and generally will not do anything unless explicitly asked to do something. This portion of the brain is what influences our self-motivation.
+We are able to get better at self-motivation through practice. The key is to realize we have control over our actions.</description>
+    </item>
+    
+  </channel>
+</rss>
