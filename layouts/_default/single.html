@@ -1,5 +1,8 @@
 {{ define "main" }}
 <main>
+  <h2>{{ .Title }}{{ if isset .Params "zettel" }} - {{ .Date }}{{ end }}</h2>
+  {{ if isset .Params "post" }}<p><b>Posted on:</b> {{ .Date.Format "Monday, January 2, 2006" }}
+  </p>{{ end }}
   {{ .Content }}
 </main>
 {{end}}
