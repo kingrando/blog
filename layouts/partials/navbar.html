@@ -1,10 +1,5 @@
-<ul>
-  <li>
-    <a href="/">Home</a>
-  </li>
-  {{ range .Site.Sections }}
-  <li>
-    <a href="{{ .Permalink}}">{{ .Title }}</a>
-  </li>
+<nav>
+  {{ range .Site.Menus.main }}
+  <a href="{{ .URL }}">{{ .Name }}</a>
   {{ end }}
-</ul>
+</nav>
