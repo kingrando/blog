@@ -3,27 +3,32 @@ languageCode = "en-us"
 title = "Kameron Ingrando"
 copyright = "2020 Kameron Ingrando"
 
+[params]
+  github = "your_github"
+  linkedin = "your_linkedin"
+  twitter = "your_twitter"
+
 [[menu.main]]
 name = "Home"
 url = "/"
 weight = 1
 
 [[menu.main]]
-name = "About"
-url = "/about"
-weight = 2
-
-[[menu.main]]
 name = "Posts"
 url = "/posts"
-weight = 3
+weight = 2
 
 [[menu.main]]
 name = "Zettels"
 url = "/zettels"
-weight = 4
+weight = 2
 
 [[menu.main]]
 name = "Tags"
 url = "/tags"
-weight = 5
+weight = 2
+
+[[menu.main]]
+name = "Resources"
+url = "/resources"
+weight = 2
