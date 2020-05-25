@@ -1,8 +1,13 @@
 ---
-title: "202005251355 How to Set Goals"
+title: "How to Set Goals"
 date: 2020-05-25T13:55:22-05:00
 draft: true
 zettel: true
+tags:
+  - books
+  - productivity
+  - goal setting
+id: 4
 ---
 ### Key Takeaways
   * SMART Goals: Specific, Measurable, Achievable, Realistic, Timeline
