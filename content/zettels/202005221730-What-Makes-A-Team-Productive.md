@@ -39,3 +39,4 @@ s
   * [The Source of What Motivates Us](202005201527-The-Source-Of-What-Motivates-Us.md)
   * [How Do We Focus](202005221730-How-Do-We-Focus.md)
   * [How To Set Goals](202005251355-How-To-Set-Goals.md)
+  * [Using Lean and Agile to Manage Others](202005251406-Using-Lean-and-Agile-To-Manage-Others.md)
