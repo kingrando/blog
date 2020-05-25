@@ -38,3 +38,4 @@ s
 ### Links
   * [The Source of What Motivates Us](202005201527-The-Source-Of-What-Motivates-Us.md)
   * [How Do We Focus](202005221730-How-Do-We-Focus.md)
+  * [How To Set Goals](202005251355-How-To-Set-Goals.md)

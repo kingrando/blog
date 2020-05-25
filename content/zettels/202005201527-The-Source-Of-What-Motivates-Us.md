@@ -28,3 +28,4 @@ Asking yourself "why are you doing something?" allows us to push our self and ma
 ### Links
   * [What Makes A Team Productive](202005221730-What-Makes-A-Team-Productive.md)
   * [How Do We Focus](202005221730-How-Do-We-Focus.md)
+  * [How To Set Goals](202005251355-How-To-Set-Goals.md)
