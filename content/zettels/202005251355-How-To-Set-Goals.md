@@ -1,7 +1,7 @@
 ---
 title: "How to Set Goals"
 date: 2020-05-25T13:55:22-05:00
-draft: true
+draft: false
 zettel: true
 tags:
   - books

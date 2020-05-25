@@ -1,7 +1,7 @@
 ---
 title: "What Makes A Team Productive"
 date: 2020-05-22T17:30:00-05:00
-draft: true
+draft: false
 zettel: true
 tags:
   - books
