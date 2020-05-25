@@ -1,5 +1,5 @@
 ---
-title: "202005251406 Using Lean and Agile to Manage Others"
+title: "Using Lean and Agile to Manage Others"
 date: 2020-05-25T14:06:26-05:00
 draft: false
 zettel: true
