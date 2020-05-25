@@ -10,12 +10,12 @@ tags:
   - management
 id: 2
 ---
-### Key Takeaways
+## Key Takeaways
   * Psychological safety is one of the most important, if not most important, characteristics required for a team to excel.
   * Every team member should have an equal opportunity to speak.
   * Every team member should be able to determine how other people are feeling.
 
-### Notes
+## Notes
 Duhigg argues that for a team to really mesh and be outstanding there must be psychological safety. If team members feel comfortable taking changes and speaking up then more risks will be taken. 
 
 [Woolley et al.](http://www.chabris.com/Woolley2010a.pdf) found that it's not a team made up of superstars and intelligent members that makes a good team. Instead all good teams that were studied had two traits. Trait 1: Every team member had equal opportunity to speak and share their ideas. Trait 2: All team members were skilled at being able to determine how others felt, they had "high social sensitivity".
@@ -33,10 +33,10 @@ Project Oxygen found that a good manager:
   7. has a clear vision and strategy
   8. has key technical skills
 
-### Reference
+## Reference
   * Chapter 2 of [Smarter Faster Better by Charles Duhigg](https://www.goodreads.com/book/show/25733966-smarter-faster-better)
 
-### Links
+## Links
   * [The Source of What Motivates Us](202005201527-The-Source-Of-What-Motivates-Us.md)
   * [How Do We Focus](202005221730-How-Do-We-Focus.md)
   * [How To Set Goals](202005251355-How-To-Set-Goals.md)

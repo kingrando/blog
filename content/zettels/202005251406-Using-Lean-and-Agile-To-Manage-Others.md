@@ -12,12 +12,12 @@ tags:
   - teamwork
 id: 4
 ---
-### Key Takeaways
+## Key Takeaways
   * Using Lean and Agile give employees a stake in the game by showing their importance and value. They are given the autonomy to solve problems and therefore it partially entrusts them with the success of the business. 
   * Building a culture that focuses on values, hiring the right people, and giving those people the ability to self-direct will go a long way in helping your company succeed.
   * Lean and Agile both focus on giving the person closet to the problem the authority to make decisions regarding it.
 
-### Notes
+## Notes
 Lean manufacturing was introduced to a GE plant in the 1980s through NUMMI. This way of manufacturing, developed by Toyota, pushed the decision making to the lowest possible level. The idea is that the people directly involved in the manufacturing of the item are the ones best suited to find issues and recommend improvements.
 
 A business's culture is what helps make them successful according to James Baron and Michael Hannan. They set out to prove this and over 15 years determined there are 5 types of cultures:
@@ -36,10 +36,10 @@ The FBI used what became known as Agile methodology to develop the Sentinel sear
   * Testing and iterating the software often instead of going through slow approval processes that could take months to have something changed.
   * Pushing the decision making to the person closest to the issue like lean does instead of to the managers manger.
 
-### References
+## References
   * Chapter 5 of [Smarter Faster Better by Charles Duhigg](https://www.goodreads.com/book/show/25733966-smarter-faster-better)
 
-### Links
+## Links
   * [The Source of What Motivates Us](202005201527-The-Source-Of-What-Motivates-Us.md)
   * [How Do We Focus](202005221730-How-Do-We-Focus.md)
   * [What Makes A Team Productive](202005221730-What-Makes-A-Team-Productive.md)
