@@ -10,7 +10,6 @@ tags:
 id: 1
 ---
 ### Key Takeaways
-
   * We can get better at self-motivation but it requires practice.
   * Giving someone a sense of control over their actions, whether it's real or not, will increase their motivation to complete something.
   * Always ask yourself why are you doing something? Reminding yourself of why and ensuring it's meaningful is a great way to foster self-motivation.

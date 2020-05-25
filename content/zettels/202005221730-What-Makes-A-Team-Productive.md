@@ -23,6 +23,7 @@ Duhigg argues that for a team to really mesh and be outstanding there must be ps
 Teams succeed when every member feels like they can speak and feel as though other members can show they are sensitive to how they fee. 
 
 Project Oxygen found that a good manager:
+
   1. is a good coach
   2. empowers and does not micromanage
   3. expresses interest and concern in subordinates’ success and well-being
@@ -31,7 +32,7 @@ Project Oxygen found that a good manager:
   6. helps with career development
   7. has a clear vision and strategy
   8. has key technical skills
-s
+
 ### Reference
   * Chapter 2 of [Smarter Faster Better by Charles Duhigg](https://www.goodreads.com/book/show/25733966-smarter-faster-better)
 
