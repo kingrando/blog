@@ -16,7 +16,7 @@ Junos contains two types of help: Context-Sensitive help and Topical help.
 ### Context-Sensitive Help
 Used to get the list of commands, options, and user-defined variables that are available in a given context. This is obtained by typing a command out and following it with a ? mark. 
 
-{{< highlight nix >}}
+```nix
 kameron@RE1> show configuration interfaces ge-0/0/?
 Possible completions:
   <interface-name>     Interface name
@@ -24,7 +24,7 @@ Possible completions:
   ge-0/0/1             Interface name
   ge-0/0/2             Interface name
   ge-0/0/4             Interface name
-{{< / highlight >}}
+```
 
 ### Topical Help
 There are 3 types of topical help in Junos: topic, reference, and apropos
@@ -32,7 +32,7 @@ There are 3 types of topical help in Junos: topic, reference, and apropos
 #### Help Topic
 Displays usage guidelines for a command. 
 
-{{< highlight nix >}}
+```nix
 kameron@RE1> help topic system host-name
                 Configuring the Hostname of the Router or Switch
 
@@ -51,12 +51,12 @@ kameron@RE1> help topic system host-name
         * Configuring Basic Router or Switch Properties
         * Mapping the Hostname of the Switch to IP Addresses
         * host-name
-{{< / highlight >}}
+```
 
 #### Help Reference
 Displays summary information for the referenced configuration statement.
 
-{{< highlight nix >}}
+```nix
 kameron@RE1> help reference system host-name
                                    host-name
 
@@ -91,13 +91,12 @@ kameron@RE1> help reference system host-name
     Related Topics
 
      * Configuring the Hostname of the Router
-
-{{< / highlight >}}
+```
 
 #### Help Apropos
 Displays contexts that reference a specific variable
 
-{{< highlight nix >}}
+```nix
 kameron@RE1> help apropos system
 monitor label-switched-path logical-system <logical-system>
     Name of logical system
@@ -120,7 +119,7 @@ clear system login
 clear system errors
     Clear system errors
 ---(more---
-{{< / highlight >}}
+```
 
 ## References
   * [Juniper Open Learning: Junos, Associate](https://cloud.contentraven.com/junosgenius/learningpath-detail/1004/3/0/1)
@@ -132,3 +131,5 @@ clear system errors
   * [User Interfaces: CLI Modes](202005251910-User-Interfaces-CLI-Modes.md)
   * [User Interfaces: CLI Navigation](202005251955-User-Interfaces-CLI-Navigation.md)
   * [User Interfaces: CLI Filtering Output](202005252000-User-Interfaces-CLI-Filtering-Output.md)
+  * [User Interfaces: Active versus Candidate Configuration](202005260819-User-Interfaces-Active-Versus-Candidate-Configuration.md)
+  * [User Interfaces: Reverting to Previous Configuration](202005260853-User-Interfaces-Reverting-to-Previous-Configuration.md)

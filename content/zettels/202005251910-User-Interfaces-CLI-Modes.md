@@ -81,3 +81,5 @@ When users enter configuration mode with the `configure exclusive` command they 
   * [User Interfaces: CLI Help](202005251940-User-Interfaces-CLI-Help.md)
   * [User Interfaces: CLI Navigation](202005251955-User-Interfaces-CLI-Navigation.md)
   * [User Interfaces: CLI Filtering Output](202005252000-User-Interfaces-CLI-Filtering-Output.md)
+  * [User Interfaces: Active versus Candidate Configuration](202005260819-User-Interfaces-Active-Versus-Candidate-Configuration.md)
+  * [User Interfaces: Reverting to Previous Configuration](202005260853-User-Interfaces-Reverting-to-Previous-Configuration.md)
