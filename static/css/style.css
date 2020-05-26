@@ -6,3 +6,7 @@
 .title{
   font-size: 24px;
 }
+
+code {
+  background-color: darkgrey;
+}
