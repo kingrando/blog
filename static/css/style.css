@@ -3,10 +3,12 @@
   max-width: 900px;
 }
 
-.title{
-  font-size: 24px;
+code {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 2ex;
+  background-color: #fafafa;
 }
 
-code {
-  background-color: darkgrey;
+.title {
+  font-size: 24px;
 }
