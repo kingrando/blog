@@ -1,7 +1,7 @@
 ---
 title: "User Interfaces: Active Versus Candidate Configuration"
 date: 2020-05-26T08:19:15-05:00
-draft: true
+draft: false
 zettel: true
 tags:
   - JNCIA-Junos
@@ -29,3 +29,5 @@ To view the candidate configuration you can issue the `show` command under confi
   * [User Interfaces: CLI Navigation](202005251955-User-Interfaces-CLI-Navigation.md)
   * [User Interfaces: CLI Filtering Output](202005252000-User-Interfaces-CLI-Filtering-Output.md)
   * [User Interfaces: Reverting to Previous Configuration](202005260853-User-Interfaces-Reverting-to-Previous-Configuration.md)
+  * [User Interfaces: Adding and Removing Configuration Statements](202005260858-User-Interfaces-Adding-Removing-Configuration-Statements.md)
+  * [User Interfaces: The J-Web Interface](202005260903-User-Interfaces-J-Web-Interface.md)
