@@ -30,3 +30,6 @@ If you come across my website and have any questsions please feel free to contac
   * [GitHub](https://github.com/kingrando)
   * [LinkedIn](https://www.linkedin.com/in/kingrando/)
   * [Twitter](https://twitter.com/KameronIngrando)
+
+## Disclaimer
+Views and opinions expressed here are mine do not reflect any organization I have been or am currently affiliated with unless otherwise specified.
