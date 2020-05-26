@@ -7,13 +7,10 @@ tags:
   - ""
 id: 
 ---
-### Key Takeaways
+## Notes
 
 
-### Notes
+## References
 
 
-### References
-
-
-### Links
+## Links
