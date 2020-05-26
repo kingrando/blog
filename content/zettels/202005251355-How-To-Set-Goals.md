@@ -7,7 +7,8 @@ tags:
   - books
   - productivity
   - goal setting
-id: 4
+id:
+  - 1
 ---
 ## Key Takeaways
   * SMART Goals: Specific, Measurable, Achievable, Realistic, Timeline
@@ -25,9 +26,3 @@ Figure out what your stretch and most ambitious goals are and then break those d
 
 ## References
   * Chapter 4 of [Smarter Faster Better by Charles Duhigg](https://www.goodreads.com/book/show/25733966-smarter-faster-better)
-
-## Links
-  * [The Source of What Motivates Us](202005201527-The-Source-Of-What-Motivates-Us.md)
-  * [How Do We Focus](202005221730-How-Do-We-Focus.md)
-  * [What Makes A Team Productive](202005221730-What-Makes-A-Team-Productive.md)
-  * [Using Lean and Agile to Manage Others](202005251406-Using-Lean-and-Agile-To-Manage-Others.md)

@@ -10,7 +10,8 @@ tags:
   - agile
   - management
   - teamwork
-id: 4
+id:
+  - 1
 ---
 ## Key Takeaways
   * Using Lean and Agile give employees a stake in the game by showing their importance and value. They are given the autonomy to solve problems and therefore it partially entrusts them with the success of the business. 
@@ -38,9 +39,3 @@ The FBI used what became known as Agile methodology to develop the Sentinel sear
 
 ## References
   * Chapter 5 of [Smarter Faster Better by Charles Duhigg](https://www.goodreads.com/book/show/25733966-smarter-faster-better)
-
-## Links
-  * [The Source of What Motivates Us](202005201527-The-Source-Of-What-Motivates-Us.md)
-  * [How Do We Focus](202005221730-How-Do-We-Focus.md)
-  * [What Makes A Team Productive](202005221730-What-Makes-A-Team-Productive.md)
-  * [How To Set Goals](202005251355-How-To-Set-Goals.md)

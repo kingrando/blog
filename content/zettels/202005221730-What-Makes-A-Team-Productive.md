@@ -8,7 +8,8 @@ tags:
   - productivity
   - teamwork
   - management
-id: 2
+id:
+  - 1
 ---
 ## Key Takeaways
   * Psychological safety is one of the most important, if not most important, characteristics required for a team to excel.
@@ -35,9 +36,3 @@ Project Oxygen found that a good manager:
 
 ## Reference
   * Chapter 2 of [Smarter Faster Better by Charles Duhigg](https://www.goodreads.com/book/show/25733966-smarter-faster-better)
-
-## Links
-  * [The Source of What Motivates Us](202005201527-The-Source-Of-What-Motivates-Us.md)
-  * [How Do We Focus](202005221730-How-Do-We-Focus.md)
-  * [How To Set Goals](202005251355-How-To-Set-Goals.md)
-  * [Using Lean and Agile to Manage Others](202005251406-Using-Lean-and-Agile-To-Manage-Others.md)
