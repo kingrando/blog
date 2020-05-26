@@ -5,5 +5,17 @@
   {{ if isset .Params "post" }}<p><b>Posted on:</b> {{ .Date.Format "Monday, January 2, 2006" }}
   </p>{{ end }}
   {{ .Content }}
+  {{ if isset .Params "zettel" }}
+    <h2>Links</h2>
+    {{ $id := .Params.id }}
+    {{ range where .Site.RegularPages "Params.id" "intersect" .Params.id }}
+    <ul>
+      <li>
+        <time>{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}</time> - <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </li>
+    </ul>
+    {{ end }}
+  {{ end }}
+
 </main>
 {{end}}
