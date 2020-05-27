@@ -4,10 +4,10 @@ date: 2020-05-22T17:30:00-05:00
 draft: false
 zettel: true
 tags:
-  - books
-  - productivity
-  - teamwork
-  - management
+  - Books
+  - Management
+  - Productivity
+  - Teamwork
 id:
   - 1
 ---

@@ -4,12 +4,12 @@ date: 2020-05-25T14:06:26-05:00
 draft: false
 zettel: true
 tags:
-  - books
-  - productivity
-  - lean
-  - agile
-  - management
-  - teamwork
+  - Agile
+  - Books
+  - Lean
+  - Management
+  - Productivity
+  - Teamwork
 id:
   - 1
 ---
