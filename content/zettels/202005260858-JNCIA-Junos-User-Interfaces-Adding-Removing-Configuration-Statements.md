@@ -14,7 +14,7 @@ id:
 ## Notes
 Configuration statements are the actual contents of the configuration files. An example is:
 
-```nix
+```bash
 	interfaces {
 	    ge-0/0/0 {
 	        unit 0 {

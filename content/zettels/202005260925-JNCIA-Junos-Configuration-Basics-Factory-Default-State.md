@@ -23,7 +23,7 @@ Before any configuration can be committed, a root password must be set. This can
 
 If you need to restore a device to factory-default configuration, you can enter these commands:
 
-```nix
+```bash
   load factory-default
   set system root-authentication plain-text-password
 ```

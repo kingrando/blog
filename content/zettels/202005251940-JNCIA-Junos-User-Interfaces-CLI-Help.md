@@ -17,7 +17,7 @@ Junos contains two types of help: Context-Sensitive help and Topical help.
 ### Context-Sensitive Help
 Used to get the list of commands, options, and user-defined variables that are available in a given context. This is obtained by typing a command out and following it with a ? mark. 
 
-```nix
+```bash
 kameron@RE1> show configuration interfaces ge-0/0/?
 Possible completions:
   <interface-name>     Interface name
@@ -33,7 +33,7 @@ There are 3 types of topical help in Junos: topic, reference, and apropos
 #### Help Topic
 Displays usage guidelines for a command. 
 
-```nix
+```bash
 kameron@RE1> help topic system host-name
                 Configuring the Hostname of the Router or Switch
 
@@ -57,7 +57,7 @@ kameron@RE1> help topic system host-name
 #### Help Reference
 Displays summary information for the referenced configuration statement.
 
-```nix
+```bash
 kameron@RE1> help reference system host-name
                                    host-name
 
@@ -97,7 +97,7 @@ kameron@RE1> help reference system host-name
 #### Help Apropos
 Displays contexts that reference a specific variable
 
-```nix
+```bash
 kameron@RE1> help apropos system
 monitor label-switched-path logical-system <logical-system>
     Name of logical system
