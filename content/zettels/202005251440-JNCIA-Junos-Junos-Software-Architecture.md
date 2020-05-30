@@ -2,14 +2,14 @@
 title: "JNCIA-Junos | Junos OS Fundamentals: Software Architecture"
 date: 2020-05-25T14:41:01-05:00
 draft: false
-zettel: true
+type: "zettel"
 tags:
   - JNCIA-Junos
   - Junos
   - Juniper
   - Networking
 id:
-  - 2
+  - "2"
 ---
 ## Notes
   * Junos is a hardened and customized version of FreeBSD.

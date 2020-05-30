@@ -2,14 +2,14 @@
 title: "JNCIA-Junos | User Interfaces: CLI Navigation"
 date: 2020-05-25T19:55:26-05:00
 draft: false
-zettel: true
+type: "zettel"
 tags:
   - JNCIA-Junos
   - Junos
   - Juniper
   - Networking
 id:
-  - 2
+  - "2"
 ---
 ## Notes
 ### Command Completion

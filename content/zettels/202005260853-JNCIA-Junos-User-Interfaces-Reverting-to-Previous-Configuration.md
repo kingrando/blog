@@ -2,14 +2,14 @@
 title: "JNCIA-Junos | User Interfaces: Reverting to Previous Configuration"
 date: 2020-05-26T08:53:42-05:00
 draft: false
-zettel: true
+type: "zettel"
 tags:
   - JNCIA-Junos
   - Junos
   - Juniper
   - Networking
 id:
-  - 2
+  - "2"
 ---
 ## Notes
 Junos can store the last 50 configurations, numbered 0 to 49, 0 being the active configuration with 49 previous configurations. 

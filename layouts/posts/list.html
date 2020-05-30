@@ -1,0 +1,30 @@
+{{ define "main" }}
+<main class="fix-footer-content">
+  <section class="section">
+    <div class="content container">
+      <h1 class="title">{{ .Title }}</h1>
+      {{ $paginator := .Paginate .Pages }}
+      {{ range first 10 $paginator.Pages }}
+          <div class="box">
+            <h2>
+              {{ .Title }}
+            </h2>
+            <p><b>Posted on: </b><time>{{ .Date.Format "Monday, January 2, 2006" }}</time></p>
+            {{ $cw := countwords .Content }}
+            {{ if gt $cw 70 }}
+              {{ .Content | truncate 500 }}
+            {{ end }}
+            {{ if .Truncated }}
+            <div>
+              <a href="{{ .RelPermalink }}">Read More…</a>
+            </div>
+            {{ end }}
+          </div>
+        {{end}}
+    </div>
+    <div class="container">
+      {{ template "_internal/pagination.html" . }}
+      </div>
+  </section>
+</main>
+{{ end }}

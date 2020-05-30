@@ -3,36 +3,48 @@ languageCode = "en-us"
 title = "Kameron Ingrando"
 copyright = "2020 Kameron Ingrando"
 
+[taxonomies]
+tag = "tags"
+
 [params]
-  github = "your_github"
-  linkedin = "your_linkedin"
-  twitter = "your_twitter"
+  GithubID = "kingrando"
+  LinkedInID = "kingrando"
+  TwitterID = "KameronIngrando"
+  Email = "kameron.ingrando@gmail.com"
 
 [markup]
   [markup.highlight]
     style = "monokailight"
 
 [[menu.main]]
-name = "Home"
-url = "/"
-weight = 1
-
-[[menu.main]]
 name = "Posts"
 url = "/posts"
-weight = 2
+weight = 1
 
 [[menu.main]]
 name = "Zettels"
 url = "/zettels"
-weight = 2
+weight = 1
 
 [[menu.main]]
 name = "Tags"
 url = "/tags"
-weight = 2
+weight = 1
 
 [[menu.main]]
 name = "Resources"
 url = "/resources"
-weight = 2
+weight = 1
+
+[related]
+threshold = 80.0
+includeNewer = true
+toLower = false
+
+  [[related.indices]]
+  name = "id"
+  weight = 100.0
+
+  [[related.indices]]
+  name = "tags"
+  weight = 10.0

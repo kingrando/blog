@@ -1,0 +1,13 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- {{ $bulmacss := "css/bulma.min.css" | absURL }}
+  <link rel="stylesheet" type="text/css" href="{{ $bulmacss }}"> -->
+  {{ $style := resources.Get "sass/main.scss" | resources.ToCSS }}
+  <link rel="stylesheet"  href="{{ $style.Permalink }}">
+  {{ $css := "css/styles.css" | absURL }}
+  <link rel="stylesheet" type="text/css" href="{{ $css }}">
+  {{ $js := "js/main.js" | absURL }}
+  <script src="{{ $js }}"></script>
+  <title>{{ .Site.Title }} - {{ .Title }}</title> 
+</head>

@@ -2,14 +2,14 @@
 title: "JNCIA-Junos | User Interfaces: Adding Removing Configuration Statements"
 date: 2020-05-26T08:58:22-05:00
 draft: false
-zettel: true
+type: "zettel"
 tags:
   - JNCIA-Junos
   - Junos
   - Juniper
   - Networking
 id:
-  - 2
+  - "2"
 ---
 ## Notes
 Configuration statements are the actual contents of the configuration files. An example is:

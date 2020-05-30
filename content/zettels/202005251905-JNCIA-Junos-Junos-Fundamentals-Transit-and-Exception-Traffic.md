@@ -2,13 +2,14 @@
 title: "JNCIA-Junos | Junos Fundamentals: Transit and Exception Traffic"
 date: 2020-05-25T19:05:27-05:00
 draft: false
-zettel: true
+type: "zettel"
 tags:
   - JNCIA-Junos
   - Junos
   - Juniper
   - Networking
-id: 2
+id:
+  - "2"
 ---
 ## Notes
 ### Transit Traffic

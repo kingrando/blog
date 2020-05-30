@@ -2,14 +2,14 @@
 title: "JNCIA-Junos | Junos Fundamentals: Control and Forwarding Planes"
 date: 2020-05-25T14:51:08-05:00
 draft: true
-zettel: true
+type: "zettel"
 tags:
   - JNCIA-Junos
   - Junos
   - Juniper
   - Networking
 id:
-  - 2
+  - "2"
 ---
 ## Notes
 The control plane runs on the Routing Engine and the Forwarding Plane runs on the Packet Forwarding Engine.

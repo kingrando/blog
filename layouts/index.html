@@ -1,6 +1,12 @@
 {{ define "main" }}
-<main>
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
+<main class="fix-footer-content">
+  <section class="section">
+    <div class="container"> 
+      <h1 class="title">{{ .Title }}</h1>
+      <div class="content">
+        {{ .Content }}
+      </div>
+    </div>
+  </section>
 </main>
 {{end}}

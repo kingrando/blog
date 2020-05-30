@@ -1,5 +1,23 @@
-<nav>
-  {{ range .Site.Menus.main }}
-  <a href="{{ .URL }}">{{ .Name }}</a>
-  {{ end }}
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+        <div class="navbar-item">
+          <a class="navbar-item content is-large has-text-info	" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+        </div>
+        <a role="button" class="burger-margin navbar-burger content" data-target="navMenu" aria-label="menu" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        
+    </div>
+    <div class="navbar-menu" id="navMenu">
+      <div class="navbar-start">
+        {{ range .Site.Menus.main }}
+            <a class="navbar-item" href="{{ .URL }}">{{ .Name }}</a>
+        {{ end }}
+      </div>
+    </div>
+    {{ partial "social.html" . }} 
+  </div>
 </nav>

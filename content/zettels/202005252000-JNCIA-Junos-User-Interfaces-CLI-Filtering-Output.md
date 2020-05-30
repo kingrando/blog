@@ -2,14 +2,14 @@
 title: "JNCIA-Junos | User Interfaces: CLI Filtering Output"
 date: 2020-05-25T20:00:22-05:00
 draft: false
-zettel: true
+type: "zettel"
 tags:
   - JNCIA-Junos
   - Junos
   - Juniper
   - Networking
 id:
-  - 2
+  - "2"
 ---
 ## Notes
 Filtering Command-Line Output

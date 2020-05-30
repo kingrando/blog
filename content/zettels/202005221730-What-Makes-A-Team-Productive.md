@@ -2,14 +2,14 @@
 title: "What Makes A Team Productive"
 date: 2020-05-22T17:30:00-05:00
 draft: false
-zettel: true
+type: "zettel"
 tags:
   - Books
   - Management
   - Productivity
   - Teamwork
-id:
-  - 1
+id: 
+  - "1"
 ---
 ## Key Takeaways
   * Psychological safety is one of the most important, if not most important, characteristics required for a team to excel.

@@ -2,13 +2,13 @@
 title: "The Source Of What Motivates Us"
 date: 2020-05-20T15:27:27-05:00
 draft: false
-zettel: true
+type: "zettel"
 tags:
-  - books
-  - motivation
-  - productivity
+  - Books
+  - Motivation
+  - Productivity
 id: 
-  - 1
+  - "1"
 ---
 ## Key Takeaways
   * We can get better at self-motivation but it requires practice.

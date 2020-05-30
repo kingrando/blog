@@ -1,21 +1,27 @@
 {{ define "main" }}
-<main>
-  <h1>{{ .Title }}{{ if isset .Params "zettel" }}</h1>
- <p> <b>Date Record: </b>{{ .Date }}{{ end }}</p>
-  {{ if isset .Params "post" }}<p><b>Posted on:</b> {{ .Date.Format "Monday, January 2, 2006" }}
-  </p>{{ end }}
-  {{ .Content }}
-  {{ if isset .Params "zettel" }}
-    <h2>Links</h2>
-    {{ $id := .Params.id }}
-    {{ range where .Site.RegularPages "Params.id" "intersect" .Params.id }}
-    <ul>
-      <li>
-        <time>{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}</time> - <a href="{{ .Permalink }}">{{ .Title }}</a>
-      </li>
-    </ul>
-    {{ end }}
-  {{ end }}
-
+<main class="fix-footer-content">
+  <section class="section">
+    <div class="content container">
+      <h1 class="title">{{ .Title }}</h1>
+      {{ if eq .Params.type "post" }}
+        <article>
+          <p><b>Posted On: </b>{{ .Date.Format "Monday, January 2, 2006" }}</p>
+      {{ else if eq .Params.type "zettel" }}
+        <article>
+        <p><b>Date Record: </b>{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}</p>
+      {{ end }}
+      {{ .Content }}
+      </article>
+      {{ $related := .Site.RegularPages.RelatedIndices . "id" }}
+      {{ with $related }}
+      <h2>See Also</h2>
+      <ul>
+        {{ range . }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
+      {{ end }}
+      </div>
+    </section>
 </main>
 {{end}}

@@ -2,14 +2,14 @@
 title: "JNCIA-Junos | User Interfaces: CLI Modes"
 date: 2020-05-25T19:12:08-05:00
 draft: false
-zettel: true
+type: "zettel"
 tags:
   - JNCIA-Junos
   - Junos
   - Juniper
   - Networking
 id:
-  - 2
+  - "2"
 ---
 ## Notes
 The CLI can be entered either through Out-of-Band Management Serial Port, Out-of-Band Management Ethernet port, or In-band SSH/Telnet. 

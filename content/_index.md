@@ -9,7 +9,32 @@ Welcome to my website. This is primarily intended for personal use but if any of
 
 A little bit about me. My name is Kameron Ingrando and I'm currently a Senior Network Engineer in the DFW Area where I focus on Automation and NetDevOps. 
 
-I have over 7 years of experience in the industry and have worked with a wide variety of technologies: {Cisco: [ASA, Catalyst, Firepower, Identity Services Engine, Meraki, WLC], Juniper: [EX, MX, QFX], Random: [Ansible, Ekahau, Linux, Python, Wireshark]}.
+I have over 7 years of experience in the industry and have worked with a wide variety of technologies: 
+
+```
+{
+   "Cisco":[
+      "ASA",
+      "Catalyst",
+      "Firepower",
+      "Identity Services Engine",
+      "Meraki",
+      "WLC"
+   ],
+   "Juniper":[
+      "EX",
+      "MX",
+      "QFX"
+   ],
+   "Random":[
+      "Ansible",
+      "Ekahau",
+      "Linux",
+      "Python",
+      "Wireshark"
+   ]
+}
+```
 
 Outside of networking, I've been exploring programming more, specfically web apps, and looking at monitoring, SRE, Docker, and whatever else I discover/feel like looking at.
 

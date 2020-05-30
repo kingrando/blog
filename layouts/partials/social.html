@@ -1,0 +1,14 @@
+<div class="navbar-end">
+  {{ with .Site.Params.GithubID }}
+  <a class="navbar-item" href="https://github.com/{{.}}" rel="me" title="GitHub"><span class="icon"><ion-icon size="large" name="logo-github"></ion-icon></span></a>
+  {{ end }}
+  {{ with .Site.Params.LinkedInID }}
+  <a class="navbar-item" href="https://linkedin.com/in/{{.}}" rel="me" title="LinkedIn"><span class="icon"><ion-icon size="large" name="logo-linkedin"></ion-icon></span></a>
+  {{ end }}
+  {{ with .Site.Params.Email }}
+  <a class="navbar-item" href="mailto:{{.}}" title="Email"><span class="icon"><ion-icon size="large" name="mail-outline"></ion-icon></span></a>
+  {{ end }}
+  {{ with .Site.Params.TwitterID }}
+  <a class="navbar-item" href="https://twitter.com/{{.}}" rel="me" title="Twitter"><span class="icon"><ion-icon size="large" name="logo-twitter"></ion-icon></span></a>
+  {{ end }}
+</div> 

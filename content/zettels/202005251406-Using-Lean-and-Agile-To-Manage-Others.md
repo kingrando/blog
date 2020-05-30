@@ -2,7 +2,7 @@
 title: "Using Lean and Agile to Manage Others"
 date: 2020-05-25T14:06:26-05:00
 draft: false
-zettel: true
+type: "zettel"
 tags:
   - Agile
   - Books
@@ -10,8 +10,8 @@ tags:
   - Management
   - Productivity
   - Teamwork
-id:
-  - 1
+id: 
+  - "1"
 ---
 ## Key Takeaways
   * Using Lean and Agile give employees a stake in the game by showing their importance and value. They are given the autonomy to solve problems and therefore it partially entrusts them with the success of the business. 

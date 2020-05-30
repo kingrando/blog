@@ -2,14 +2,14 @@
 title: "JNCIA-Junos | User Interfaces: J-Web Interface"
 date: 2020-05-26T09:03:08-05:00
 draft: false
-zettel: true
+type: "zettel"
 tags:
   - JNCIA-Junos
   - Junos
   - Juniper
   - Networking
 id:
-  - 2
+  - "2"
 ---
 ## Notes
 ### J-Web Interface Dashboards

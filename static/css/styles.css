@@ -1,0 +1,12 @@
+.fix-footer {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.fix-footer-content {
+  flex: 1;
+}
+.burger-margin {
+  margin-top: .45rem;
+  margin-right: .45rem;
+}

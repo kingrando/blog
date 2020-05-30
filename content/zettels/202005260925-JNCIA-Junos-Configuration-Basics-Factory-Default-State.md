@@ -2,14 +2,14 @@
 title: "JNCIA-Junos | Configuration Basics: Factory Default State"
 date: 2020-05-26T09:25:55-05:00
 draft: false
-zettel: true
+type: "zettel"
 tags:
   - JNCIA-Junos
   - Junos
   - Juniper
   - Networking
 id:
-  - 2
+  - "2"
 ---
 ## Notes
 When a device ships, it ships with a factory-default configuration. This default configuration contains a few things:

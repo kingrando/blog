@@ -2,14 +2,14 @@
 title: "JNCIA-Junos | User Interfaces: CLI Help"
 date: 2020-05-25T19:40:51-05:00
 draft: false
-zettel: true
+type: "zettel"
 tags:
   - JNCIA-Junos
   - Junos
   - Juniper
   - Networking
 id:
-  - 2
+  - "2"
 ---
 ## Notes
 Junos contains two types of help: Context-Sensitive help and Topical help. 
