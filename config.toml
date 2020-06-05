@@ -15,6 +15,8 @@ tag = "tags"
 [markup]
   [markup.highlight]
     style = "monokailight"
+  [markup.tableOfContents]
+    endLevel = 5
 
 [[menu.main]]
 name = "Posts"

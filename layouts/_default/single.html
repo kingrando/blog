@@ -3,25 +3,37 @@
   <section class="section">
     <div class="content container">
       <h1 class="title">{{ .Title }}</h1>
-      {{ if eq .Params.type "post" }}
-        <article>
-          <p><b>Posted On: </b>{{ .Date.Format "Monday, January 2, 2006" }}</p>
-      {{ else if eq .Params.type "zettel" }}
-        <article>
-        <p><b>Date Record: </b>{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}</p>
-      {{ end }}
-      {{ .Content }}
-      </article>
-      {{ $related := .Site.RegularPages.RelatedIndices . "id" }}
-      {{ with $related }}
-      <h2>See Also</h2>
-      <ul>
-        {{ range . }}
-        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ if eq .Params.type "post" }}
+            <p><b>Posted On: </b>{{ .Date.Format "Monday, January 2, 2006" }}</p>
+        {{ else if eq .Params.type "zettel" }}
+          <p><b>Date Record: </b>{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}</p>
         {{ end }}
-      </ul>
-      {{ end }}
+          <div class="columns">
+            <div class="column is-three-quarters">
+              <article>
+                {{ .Content }}
+              </article>
+        </div>
+        <div class="column">
+          <aside>
+            <h2>Contents</h2>
+            {{ .TableOfContents }}
+          </aside>
+        </div>
       </div>
-    </section>
+        <div>
+        {{ $related := .Site.RegularPages.RelatedIndices . "id" }}
+        {{ with $related }}
+        <h2>See Also</h2>
+        <ul>
+          {{ range . }}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{ end }}
+        </ul>
+        {{ end }}
+      </div>
+      </div>
+    </div>
+  </section>
 </main>
 {{end}}

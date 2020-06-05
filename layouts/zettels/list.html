@@ -3,11 +3,15 @@
   <section class="section">
     <div class="content container">
       <h1 class="title">{{ .Title }}</h1>
-          {{ range .Pages }}
-            <li>
-              <time>{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}</time> - <a href="{{ .Permalink }}">{{ .Title }}</a>
-            </li>
-          {{ end }}
+          {{ $pages := .Pages.GroupByDate "2006" }}
+          {{ range $pages }}
+            <h2>{{ .Key }}</h2>
+              {{ range .Pages }}
+                <li>
+                  <time>{{ .Date.Format "Jan 02 @ 15:04 MST" }}</time> - <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </li>
+              {{ end }}
+            {{ end }}
       </ul>
     </div>
   </section>
