@@ -11,7 +11,7 @@ tags:
 id:
   - "2"
 ---
-## Notes
+## Initial Configuration Recommendation
 Juniper recommends configuring the following  items when you are first setting up your Junos OS device:
 
   * The root password
@@ -20,9 +20,9 @@ Juniper recommends configuring the following  items when you are first setting u
   * Remote access protocols
   * Management interface and static routes for the management traffic to use the management interface
 
-Note: I have labeled my Junos OS devices in my lab as RE1 through RE5 so the hostnames in my commands will reflect that.
+**Note**: I have labeled my Junos OS devices in my lab as RE1 through RE5 so the hostnames in my commands will reflect that.
 
-Configure System Parameters
+## Configure System Parameters
 Perform the following steps:
 
   1. Enter configuration mode:

@@ -11,8 +11,7 @@ tags:
 id:
   - "2"
 ---
-## Notes
-Filtering Command-Line Output
+## How to Filter CLI Output
 The command-line output for Junos OS commands can be modified and filtered using the pipe-key ( | ) along with modifiers. 
 
 The following are some of the modifiers available:

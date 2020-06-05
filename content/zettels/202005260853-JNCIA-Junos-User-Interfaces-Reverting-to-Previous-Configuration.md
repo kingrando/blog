@@ -11,7 +11,7 @@ tags:
 id:
   - "2"
 ---
-## Notes
+## Configuration Rollback
 Junos can store the last 50 configurations, numbered 0 to 49, 0 being the active configuration with 49 previous configurations. 
 
 This enables you to roll back to a previous configuration. 

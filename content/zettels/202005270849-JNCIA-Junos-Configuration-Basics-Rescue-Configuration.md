@@ -11,7 +11,7 @@ tags:
 id:
   - "2"
 ---
-## Notes
+## Rescue Configuration
 With Junos OS a rescue configuration can be created which will be loaded in the event there is an issue with the active configuration. 
 
 By default there is no rescue configuration created.

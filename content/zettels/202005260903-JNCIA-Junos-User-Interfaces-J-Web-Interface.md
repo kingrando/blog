@@ -11,8 +11,7 @@ tags:
 id:
   - "2"
 ---
-## Notes
-### J-Web Interface Dashboards
+## J-Web Interface Dashboards
 The J-Web interface is a web GUI used to configure and manage Junos OS devices over HTTP or HTTPS. It has 5 primary tabs which perform the following functions:
 
   * The Summary tab
@@ -33,7 +32,7 @@ The J-Web interface is a web GUI used to configure and manage Junos OS devices o
     * Perform software upgrades
     * Monitor the device with tools such as ping and traceroute
 		
-### Basic Settings Configuration Page
+## Basic Settings Configuration Page
 When you first configure a Junos device via the J-Web interface you can configure the basic settings of a device via a Basic Settings wizard. This wizard can be accessed via **Configure > Device Settings > Basic Settings**
 
 On the Basic Settings screen, you can configure the following information:

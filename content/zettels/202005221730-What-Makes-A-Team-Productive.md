@@ -17,7 +17,7 @@ id:
   * Every team member should be able to determine how other people are feeling.
 
 ## Notes
-Duhigg argues that for a team to really mesh and be outstanding there must be psychological safety. If team members feel comfortable taking changes and speaking up then more risks will be taken. 
+Duhigg argues that for a team to really mesh and be outstanding there must be psychological safety. If team members feel comfortable taking changes and speaking up, then more risks will be taken. 
 
 [Woolley et al.](http://www.chabris.com/Woolley2010a.pdf) found that it's not a team made up of superstars and intelligent members that makes a good team. Instead all good teams that were studied had two traits. Trait 1: Every team member had equal opportunity to speak and share their ideas. Trait 2: All team members were skilled at being able to determine how others felt, they had "high social sensitivity".
 

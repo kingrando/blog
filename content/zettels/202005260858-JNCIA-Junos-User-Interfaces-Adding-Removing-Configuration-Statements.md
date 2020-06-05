@@ -11,7 +11,7 @@ tags:
 id:
   - "2"
 ---
-## Notes
+## Editing the Configuration
 Configuration statements are the actual contents of the configuration files. An example is:
 
 ```bash

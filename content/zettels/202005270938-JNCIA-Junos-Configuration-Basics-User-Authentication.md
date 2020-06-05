@@ -11,10 +11,7 @@ tags:
 id:
   - "2"
 ---
-## Notes
-Junos OS provides three methods for authenticating users: Local accounts, RADIUS, and TACACS+.
-
-### Local Accounts
+## Local Accounts
 All new users that are created locally are added under the `[edit system login]` hierarchy.
 
 ```bash
@@ -48,17 +45,17 @@ When a user is created, a working directory is created for that user.
 If you want to change the working directory for a user, you can issue the following command:
   * `root@RE1> set cli directory directory`
 
-### RADIUS and TACACS+
+## RADIUS and TACACS+
 The other option for configuring user accounts is to use a AAA server which can either be RADIUS or TACACS+ but TACACS+ isn't very common outside of Cisco environments. The use of a AAA server allows for flexibility, scalability, and ease of user management. 
 
-#### Login Classes with RADIUS
+### Login Classes with RADIUS
 When RADIUS is used for authentication, the Junos device can apply a local user template to that user’s session. This template specifies what login class will be applied. 
 
 To create a local template, perform the following:
   * `set system login user <template-name> class [<user-defined-class> | operator | read-only | super-user | authorized]`
   * `set system login user remote-read-only class read-only`
 
-#### Authentication Order
+### Authentication Order
 The authentication order is set using the `authentication-order` statement. 
 
 To set the authentication order issue the following command: 
@@ -75,7 +72,7 @@ RADIUS or TACACS+ authentication can fail because the authentication servers:
   * Do not respond within the timeout period
   * Are not reachable over the network
 
-#### Configuring RADIUS
+### Configuring RADIUS
 To configure RADIUS, you must issue the following commands:
   1.  Add an IPv4 or IPv6 server address:
     * set system radius-server server-address source-address source-address
@@ -91,7 +88,7 @@ To configure RADIUS, you must issue the following commands:
   1. Assign a login class for remote users
     * set system login user remote class class
 
-##### Setup FreeRADIUS for testing
+#### Setup FreeRADIUS for testing
 Setup the FreeRADIUS server using the Getting Started guide found [here](https://wiki.freeradius.org/guide/Getting%20Started).
 
  Edit the file `/etc/freeradius/3.0/clients.conf` and add the switch or router:
@@ -112,7 +109,7 @@ After restarting the FreeRADIUS server then you should be able to test the user.
 
 On the RADIUS server, the Juniper VSA (Vendor-Specific-Attribute) of Juniper-Local-User-Name must be set for the user. This attribute is used to match the user to the local user template.  
 
-#### Confirm RADIUS
+### Confirm RADIUS
   * Display the configured authentication order
     ```bash
     [edit]

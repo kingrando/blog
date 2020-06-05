@@ -11,7 +11,7 @@ tags:
 id:
   - "2"
 ---
-## Notes
+## Factory Default State
 When a device ships, it ships with a factory-default configuration. This default configuration contains a few things:
   * There is a root account that has no password. When you first log into a Junos OS device you will log in with root as the username and no password and you will be taken directly to the UNIX shell.
   * The system host name will not be set and instead will say Amnesiac.

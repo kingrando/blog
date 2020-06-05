@@ -11,8 +11,7 @@ tags:
 id:
   - "2"
 ---
-## Notes
-### Command Completion
+## Command Completion
 Junos OS provides two ways to complete commands using the CLI. 
 
   1. Space Bar
@@ -22,7 +21,7 @@ Junos OS provides two ways to complete commands using the CLI.
      * Completes commands and variables such as policy names, AS paths, community names, and IP addresses.
      * **Example**: if an interface has an IP address configured on it, the following command can be entered followed by tab: set interface ge-0/0/0 unit 0 family inet address 1 , followed by tab and it will complete to set interface ge-0/0/0 unit 0 family inet address 10.0.1.1/30 or whatever the IP address is set to.
 
-### Editing Command Lines
+## Editing Command Lines
 The Junos OS uses a default VT100 terminal types for commands and arrow keys. The platform also supports emac commands for moving around the lines which include:
 
   * `Ctrl+b` - Left one character
@@ -40,7 +39,7 @@ The Junos OS uses a default VT100 terminal types for commands and arrow keys. Th
   * `Esc+b` - Moves the cursor back one word with no delete
   * `Esc+f` - Moves the cursor forward one word with no delete
 
-### Moving Between Levels
+## Moving Between Levels
 Since the Junos OS is a hierarchy configuration, you are able to move between the hierarchy levels. The following options are available to move between levels:
 
   * `edit` - Used to specify your desired hierarchy level. 

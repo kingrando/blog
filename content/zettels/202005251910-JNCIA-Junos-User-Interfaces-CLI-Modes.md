@@ -11,7 +11,7 @@ tags:
 id:
   - "2"
 ---
-## Notes
+## Entering the CLI
 The CLI can be entered either through Out-of-Band Management Serial Port, Out-of-Band Management Ethernet port, or In-band SSH/Telnet. 
 
 If you connect to through any of these options and login as the `root` user then you will need to enter the command `cli` to enter the Junos CLI. To exit the Junos CLI and get back to the Unix shell you can enter `start shell`.
@@ -21,7 +21,7 @@ If you connect to through any of these options and login as the `root` user then
 
 The Junos OS has two modes for working with the command-line, Operational Mode and Configuration Mode.
 
-### Operational Mode
+## Operational Mode
 Operational mode is the default mode you enter after logging into the device as a non-root user. 
 
 This mode is used for device monitoring and troubleshooting. 
@@ -36,7 +36,7 @@ Common commands that are used here are:
   * `test` - Perform diagnostic debugging
   * `traceroute` - Trace route to remote host
 
-### Configuration Mode
+## Configuration Mode
 Configuration mode is used to change the configuration of a Junos OS device. It is entered into by typing `configure` under operational mode.
 
 Common commands used under this mode are:

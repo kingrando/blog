@@ -11,13 +11,12 @@ tags:
 id:
   - "2"
 ---
-## Notes
-### Transit Traffic
+## Transit Traffic
 Transit traffic is any traffic that comes in an ingress port, checked against the forwarding table, and then forwarded out an egress port.
 
 This type of traffic is your typical Unicast or Multicast traffic that comes in one port and is sent out either one port or multiple ports.
 
-### Exception Traffic
+## Exception Traffic
 Exception traffic is any traffic that requires some type of special handling. It is sent over the internal link to the RE and is given priority in the event of device congestion.
 
 Since it is sent to the RE, it is rate-limited to prevent Denial-of-Service attacks. This rate is not configurable. 
