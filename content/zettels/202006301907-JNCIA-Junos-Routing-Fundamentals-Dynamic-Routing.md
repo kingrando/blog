@@ -38,6 +38,10 @@ There are two primary classifications of dynamic routing protocols:
     * `show ospf route`
   * Show OSPF neighbor status information:
     * `show ospf neighbor`
+  * Show OSPF interface status information:
+    * `show ospf interface`
+  * Show OSPF link-state database:
+    * `show ospf database`
 
 ## References
   * [Juniper Open Learning: Junos, Associate](https://cloud.contentraven.com/junosgenius/learningpath-detail/1004/3/0/1)

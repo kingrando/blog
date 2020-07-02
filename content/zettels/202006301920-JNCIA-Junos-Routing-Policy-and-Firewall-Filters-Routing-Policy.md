@@ -38,4 +38,5 @@ The following outlines the default routing policies for 4 major dynamic routing 
     * **Export**: Reject everything
 
 ## References
+  * [Juniper Open Learning: Junos, Associate](https://cloud.contentraven.com/junosgenius/learningpath-detail/1004/3/0/1)
 
