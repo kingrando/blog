@@ -20,7 +20,7 @@ Dynamic Routing Protocols benefits:
 
 There are two primary classifications of dynamic routing protocols:
 
-  1. *Interior Gateway Protocols (IGPs)* which operation within a single autonmous system (a network managed by a single entity). RIP, IS-IS, and OPSF are examples of IGPs.
+  1. *Interior Gateway Protocols (IGPs)* which operation within a single autonomous system (a network managed by a single entity). RIP, IS-IS, and OSPF are examples of IGPs.
   2. *Exterior Gateway Protocols (EGPs)* which operate among different autonomous systems. BPG is the only EGP in use today.
 
 ## Configure OSPF

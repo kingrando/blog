@@ -16,17 +16,17 @@ Routing instance is defined as a group of routing tables, interfaces, and protoc
 
 **Note:** There can only be one instance of each protocol per routing table. 
 
-By default a unicast routing instaces called `master` is created and includes the `inet.0` routing instance.
+By default a unicast routing instances called `master` is created and includes the `inet.0` routing instance.
 
-User-defined routing instaces can be created at `[edit routing-instances]` hierarchy:
+User-defined routing instances can be created at `[edit routing-instances]` hierarchy:
 
   * Filter-based Forwarding (FPF)
-    * `forwarding`: Used to implements a filter-based forwarding for common Access Layer applcations.
+    * `forwarding`: Used to implements a filter-based forwarding for common Access Layer applications.
     * `no-forwarding`: Used to separate large networks into smaller administrative entities.
   * Layer 2 and Layer 3 VPN Services
     * `l2vpn`: Used in Layer 2 VPN implementations
     * `vpls`: Used for point-to-multipoint LAN implementations between a set of sites in a VPN
-    * `vrf`: Used in Layer 3 VPN implentations
+    * `vrf`: Used in Layer 3 VPN implementations
   * System Virtualization
     * `virtual-router`: Used for non-VPN-related applications, such as system virtualization
 
