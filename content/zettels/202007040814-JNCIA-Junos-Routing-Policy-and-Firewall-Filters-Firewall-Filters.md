@@ -45,9 +45,9 @@ A firewall filter is made up of the following components:
   * **Firewall Filter Type**: This specifies the type of filter to use.
     * This is set under the `firewall family <family-name>` hierarchy using the `set filter <filter-name>` command.
     * Possible values are:
-      * **Firewall**: Filters based on either *any* or a protocol.
+      * **Standard**: Filters based on either *any* or a protocol.
         * Set under the `firewall family <family-name>` hierarchy with the `set filter <filter-name>` command.
-      * **Standard**: Filters ingress and egress IPv4 and IPv6 traffic based on almost any field of the IP header.
+      * **Service**: Filters ingress and egress IPv4 and IPv6 traffic based on almost any field of the IP header.
         * Set under the `firewall family [inet | inet6]` hierarchy with the `set service-filter <filter-name>` command.
       * **Simple**: Filters ingress on IPv4 traffic using Source/Destination IP address and ports.
         * Set under the `firewall family inet` hierarchy with the `set simple-filter <filter-name>` command.
@@ -56,7 +56,7 @@ A firewall filter is made up of the following components:
       * **Action**: The *then* statement contains the action to take once the condition has been matched. There are three types of actions:
         * **Terminating Actions**: Performs the action and then halts any more processing of the packet.
         * **Non-terminating Actions**: Performs stuff such as counting packets, logging information, or sampling packets.
-        * **Flow Control Actions**: Enables the next term to be evaluating instead of performing a terminating action.
+        * **Flow Control Actions**: Enables the next term to be evaluated instead of performing a terminating action.
 
 ## Application
 Once a firewall filter has been configured, you must apply it to an application point. Application points include:

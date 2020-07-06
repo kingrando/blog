@@ -48,7 +48,6 @@ To enable devices to make faster decisions, a subset of the routing table is sto
 
 To view the forwarding table use: `show route forwarding-table`
 
-
 An ICMP destination unreachable message is sent by the router if an incoming packet matches the default forwarding entry. 
 
 Common Route Types Associated With Forwarding Entries:

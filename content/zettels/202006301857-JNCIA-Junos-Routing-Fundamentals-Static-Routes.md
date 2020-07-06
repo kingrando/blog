@@ -1,5 +1,5 @@
 ---
-title: "JNCIA Junos | Routing Fundamentals: Routing Instances"
+title: "JNCIA Junos | Routing Fundamentals: Static Routes"
 date: 2020-06-30T18:57:38-05:00
 draft: false
 type: "zettel"
