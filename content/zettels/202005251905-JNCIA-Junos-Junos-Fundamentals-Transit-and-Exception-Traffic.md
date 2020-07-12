@@ -24,8 +24,8 @@ Since it is sent to the RE, it is rate-limited to prevent Denial-of-Service atta
 Examples of this traffic include:
 
   * Packets addressed to the chassis such as routing protocol updates, SSH sessions, and pings.
-	* IP packets with the IP options field, although this is rare
-	* Traffic that requires the generation of ICMP messages.
+  * IP packets with the IP options field, although this is rare
+  * Traffic that requires the generation of ICMP messages.
 
 ## References
   * [Juniper Open Learning: Junos, Associate](https://cloud.contentraven.com/junosgenius/learningpath-detail/1004/3/0/1)

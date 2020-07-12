@@ -1,7 +1,7 @@
 ---
 title: "JNCIA-Junos | Junos Fundamentals: Control and Forwarding Planes"
 date: 2020-05-25T14:51:08-05:00
-draft: true
+draft: false
 type: "zettel"
 tags:
   - JNCIA-Junos
