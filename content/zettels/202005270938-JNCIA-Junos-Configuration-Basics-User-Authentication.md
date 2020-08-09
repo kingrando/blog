@@ -44,6 +44,9 @@ When a user is created, a working directory is created for that user.
 
 If you want to change the working directory for a user, you can issue the following command:
   * `root@RE1> set cli directory directory`
+  
+You can view the current working directory using:
+  * `root@RE1> show cli directory`
 
 ## RADIUS and TACACS+
 The other option for configuring user accounts is to use a AAA server which can either be RADIUS or TACACS+ but TACACS+ isn't very common outside of Cisco environments. The use of a AAA server allows for flexibility, scalability, and ease of user management. 
