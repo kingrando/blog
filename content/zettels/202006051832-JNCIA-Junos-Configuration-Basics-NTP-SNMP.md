@@ -41,7 +41,7 @@ SNMP on Junos supports v1, 2c, and 3.
   * Set SNMP community string
     * `set snmp community community-name authorization [read-only | read-write]`
   * Set the IP addresses of clients that can use the community
-    * `set snmp community community-name clients network/network-mask restrict`
+    * `set snmp community community-name clients network/network-mask`
   * Create a client list with a set of IP addresses that can use the SNMP community.
     * `set snmp client-list list-name network/network-mask`
     * `set snmp community-name client-list-name list`
