@@ -64,9 +64,9 @@ The authentication order is set using the `authentication-order` statement.
 To set the authentication order issue the following command: 
   * `set system authentication-order [password | radius | tacplus]`
 To add an additional authentication method:
-  * `insert system authentication-order password [before | after] radius`
+  * `insert system authentication-order [password | radius | tacplus] [before | after] [password | radius | tacplus]`
 To remove an authentication method:
-  * `delete system authentication-order password [before | after] radius`
+  * `delete system authentication-order [password | radius | tacplus]`
  
 Authentication is done in the order that is set in the authentication-order command. If a login is not found in the radius or tacacs server then the local user database is tried. 
  
