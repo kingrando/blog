@@ -24,9 +24,9 @@ The destination filename is saved in the following format, where n corresponds
 
 ## Configuration
   * Configure the archival sites (HTTP, FTP, or SCP)
-    * `set system archival configuration archive-sites url`
+    * `set system archival configuration archive-sites <url>`
   * Configure the transfer interval
-    * `set system archival configuration transfer-interval 15-2880minutes`
+    * `set system archival configuration transfer-interval <15-2880 minutes>`
   * Configure the option to transfer on commit
     * `set system archival configuration transfer-on-commit`
 
