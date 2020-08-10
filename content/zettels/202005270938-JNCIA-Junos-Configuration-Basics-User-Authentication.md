@@ -78,18 +78,23 @@ RADIUS or TACACS+ authentication can fail because the authentication servers:
 ### Configuring RADIUS
 To configure RADIUS, you must issue the following commands:
   1.  Add an IPv4 or IPv6 server address:
-    * `set system radius-server server-address source-address source-address`
+  
+      * `set system radius-server server-address source-address source-address`
   1. Set the shared secret
-    * `[edit system radius-server server-address]`
-    * `set secret secret`
+  
+      * `[edit system radius-server server-address]`
+      * `set secret secret`
   1. (Optional) Specify a port number
-    * `[edit system radius-server server-address]`
-    * `set port port-number`
+  
+      * `[edit system radius-server server-address]`
+      * `set port port-number`
   1. Specify the authentication order
-    * `set system authentication-order radius `
-    * `insert system authentication-order password after radius`
+  
+      * `set system authentication-order radius `
+      * `insert system authentication-order password after radius`
   1. Assign a login class for remote users
-    * `set system login user remote class class`
+  
+      * `set system login user remote class class`
 
 #### Setup FreeRADIUS for testing
 Setup the FreeRADIUS server using the Getting Started guide found [here](https://wiki.freeradius.org/guide/Getting%20Started).
