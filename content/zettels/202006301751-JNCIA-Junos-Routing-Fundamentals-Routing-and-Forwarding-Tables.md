@@ -18,7 +18,7 @@ The routing table is used to determine the best active route for each destinatio
 
 On Juniper devices there are multiple routing tables:
   1. `inet.0`: IPv4 unicast routes
-  2.` inet.1`: Multicast forwarding cache
+  2. `inet.1`: Multicast forwarding cache
   3. `inet.2`: Used by Multicast BGP routes to perform RPF checks.
   4. `inet.3`: MPLS path info
   5. `inet.4`: Multicast Source Discovery Protocol (MSDP) route entries
