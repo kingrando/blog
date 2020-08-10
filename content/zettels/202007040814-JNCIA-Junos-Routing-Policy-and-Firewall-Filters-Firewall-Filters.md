@@ -68,14 +68,16 @@ Once a firewall filter has been configured, you must apply it to an application 
 To apply firewall filters use the following command(s) at the interface hierarchy:
 
   * Standard Firewall Filter:
-    * `set filter [input | input-filter-list | output | output-filter-list ] filter-name`
+    * `[edit interfaces ge-0/0/0 unit 0]` or `[edit interfaces ge-0/0/0 unit 0 family inet]`
+    * `set filter [input | input-filter-list | output | output-filter-list ] <filter-name>`    
   * Service Filter:
-    * `set service input post-service-filter <filter-name>`
-  * Post-Service Filter:
+    * `[edit interfaces ge-0/0/0 unit 0 family inet]`
     * `set service input post-service-filter <filter-name>`
   * Simple Firewall Filter:
+    * `[edit interfaces ge-0/0/0 unit 0 family inet]`
     * `set simple-filter <filter-name>`
   * Reverse packet forwarding (RPF) check filter:
+    * `[edit interfaces ge-0/0/0 unit 0 family inet]`
     * `set rpf-check fail-filter <filter-name>`
 
 ## Policing
@@ -84,7 +86,11 @@ Firewall filters can apply rate policing and limiting to traffic that you would 
 
 Rate limits can be applied to bandwidth or the maximum burst size. Bandwidth can be policed either using the bandwidth limit in bits per second or it can be done using a percentage. Burst size is in bytes and is the total number of bytes the system allows in bursts of data that exceed the given bandwidth limit.
 
-A policer is configured by using the command: `set firewall policer <policer name> if-exceeding`
+An example for configuring a policer you use the following commands at the `firewall` hierarchy:
+
+  * `[edit firewall]`
+  * `set policer Example-Policer logical-bandwidth-policer if-exceeding bandwidth-percent 75`
+  * `set policer Example-Policer then discard`  
 
 ## Unicast RPF Check
 Unicast Reverse Path-Forwarding (RPF) checks automate anti-spoofing filters based on routing tables, which helps to validate packet receipt on the interfaces.
