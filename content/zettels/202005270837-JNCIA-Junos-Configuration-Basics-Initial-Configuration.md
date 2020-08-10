@@ -38,18 +38,18 @@ Perform the following steps:
       * `root@RE1# set host-name hostname`
   5. Set the timezone & system time
       * `[edit system]`
-      * `root@RE1# set time-zone timezone`
-      * `root@RE1# run set date date`
+      * `root@RE1# set time-zone <timezone>`
+      * `root@RE1# run set date YYYYMMDDhhmm.ss`
   6. Set the login methods
       * `[edit system]`
       * `root@RE1# set services ssh`
   7. Set the CLI session to timeout (it does not timeout by default)
       * `[edit system]`
-      * `root@RE1# run set cli idle-timeout 0-100000 minutes`
+      * `root@RE1# run set cli idle-timeout <0-100000 minutes>`
       * A setting of 0 will disable the timeout
   8. Set the login message
       * `[edit system]`
-      * `root@RE1# set login message "message"`
+      * `root@RE1# set login message "<message>"`
   9. Commit the changes
       * `[edit system]`
       * `root@RE1# commit`
