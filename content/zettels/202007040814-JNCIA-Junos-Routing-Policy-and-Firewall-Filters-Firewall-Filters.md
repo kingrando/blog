@@ -76,9 +76,6 @@ To apply firewall filters use the following command(s) at the interface hierarch
   * Simple Firewall Filter:
     * `[edit interfaces ge-0/0/0 unit 0 family inet]`
     * `set simple-filter <filter-name>`
-  * Reverse packet forwarding (RPF) check filter:
-    * `[edit interfaces ge-0/0/0 unit 0 family inet]`
-    * `set rpf-check fail-filter <filter-name>`
 
 ## Policing
 
@@ -104,6 +101,11 @@ There are a few caveats with Unicast RPF checks:
   1. When you have asymmetric routes, uRPF could cause legitimate traffic to be dropped. You want to use the feasible-paths option to consider all paths and not just the active routes
   2. Typically only want to enable on the edge device in the network and not on all network devices in your network.
   3. A packet is discarded by default if it fails the RPF check. You can bypass this by using the fail-filter. The fail-filter is required to permit DHCP or BOOTP traffic denied by RPF
+ 
+To configure RPF Check:
+  * Reverse packet forwarding (RPF) check filter:
+    * `[edit interfaces ge-0/0/0 unit 0 family inet]`
+    * `set rpf-check fail-filter <filter-name>`
 	
 ## References
   * [Juniper Open Learning: Junos, Associate](https://cloud.contentraven.com/junosgenius/learningpath-detail/1004/3/0/1)
