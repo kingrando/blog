@@ -20,9 +20,9 @@ A configuration item can have multiple groups applied to it but only one apply-g
 
 ## Configuration
   * Create a group
-    * `set groups group-name`
+    * `set groups <group-name>`
   * Change to the specific heirarchy and apply the group
-    * `set apply-groups group-name`
+    * `set apply-groups <group-name>`
 
 ## Verification
   * Display the configured group
