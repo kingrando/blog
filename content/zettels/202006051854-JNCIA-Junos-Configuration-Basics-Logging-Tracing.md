@@ -25,15 +25,15 @@ Syslog files are stored in `/var/log/`. The primary syslog file is located at `/
 
 ### Configuration
   * Configure the host, facility, and severity level
-    * `set system syslog host ip-address facility severity`
+    * `set system syslog host <ip-address> <facility> <severity>`
   * Specify a filename to capture logs (Optional)
-    * `set system syslog file file-name`
+    * `set system syslog file <file-name>`
   * Specify the maximum size of the log file
-    * `set system syslog file file-name archive size size`
+    * `set system syslog file <file-name> archive size <size>`
 
 ### Verification
   * Check the messages code:
-    * `help syslog message-code`
+    * `help syslog <message-code>`
 
 ## Tracing
 Tracing is the Junos OS equivalent of debug for Cisco. It requires configuration to use and provides local and remote options.
