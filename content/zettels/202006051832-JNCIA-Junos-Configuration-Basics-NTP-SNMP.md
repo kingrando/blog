@@ -20,18 +20,18 @@ NTP on Junos:
 
 ### Configuration
   * Set the NTP Boot server
-    * `set system ntp boot-server ip-address`
+    * `set system ntp boot-server <ip-address>`
   * Set the NTP server
-    * `set system ntp server ip-address`
+    * `set system ntp server <ip-address>`
   * Set NTP authentication
-    * `set system ntp authentication-key number type [md5 | sha1 | sha256] value key`
+    * `set system ntp authentication-key <number> type [md5 | sha1 | sha256] value <key>`
 
 ### Verification
   * Show system time
     * `show system uptime `
   * Show NTP servers
     * `show ntp associations `
-	* Show NTP status of the device
+  * Show NTP status of the device
     * `show ntp status   `
 
 ## SNMP
@@ -39,14 +39,14 @@ SNMP on Junos supports v1, 2c, and 3.
 
 ### Configuration
   * Set SNMP community string
-    * `set snmp community community-name authorization [read-only | read-write]`
+    * `set snmp community <community-name> authorization [read-only | read-write]`
   * Set the IP addresses of clients that can use the community
-    * `set snmp community community-name clients network/network-mask`
+    * `set snmp community <community-name> clients <network/network-mask>`
   * Create a client list with a set of IP addresses that can use the SNMP community.
-    * `set snmp client-list list-name network/network-mask`
-    * `set snmp community-name client-list-name list`
+    * `set snmp client-list <list-name> <network/network-mask>`
+    * `set snmp community <community-name> client-list-name <list>`
   * Configure SNMP Trap group name, port, and destination
-    * `set snmp trap-group group-name destination-port port targets ip-address`
+    * `set snmp trap-group <group-name> destination-port <port> targets <ip-address>`
 
 ### Verification
   * Show SNMP configuration
