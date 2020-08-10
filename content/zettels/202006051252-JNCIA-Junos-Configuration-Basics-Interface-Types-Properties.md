@@ -50,10 +50,10 @@ Other encapsulation methods such as Frame Relay, ATM, and 802.1Q support multipl
 
 ## Multiple Addresses
 By default, when you attempt to change an IP address on a Juniper device it will actually add an additional IP address to that interface. This would be done using the command: 
-  * `set family inet address ip-address`
+  * `set family inet address <ip-address/mask>`
 
 However, to actually change the IP address on an interface you must use the rename command and not the set command as shown: 
-  * `rename family inet address ip-address/mask to address ip-address/mask`
+  * `rename family inet address <ip-address/mask> to address <ip-address/mask>`
 
 ## Interface Properties
 There are two types of interface properties: *physical* and *logical*. 
@@ -78,13 +78,13 @@ The *Logical Interface* properties are those that describe the more abstract ite
 
 ## Interface Configuration
   * Create an interface:
-    * `set interfaces interface-name unit unit-number`
+    * `set interfaces <interface-name> unit <unit-number>`
   * Assign an IP address
-    * `set interfaces interface-name unit unit-number family inet address ip-address/prefix-length`
+    * `set interfaces <interface-name> unit <unit-number> family inet address <ip-address/prefix-length>`
   * Set a description
-    * `set interfaces interface-name unit unit-number description description`
+    * `set interfaces <interface-name> unit <unit-number> description <description>`
   * Set VLAN ID
-    * `set interfaces interface-name unit unit-number vlan-id vlan-id`
+    * `set interfaces <interface-name> unit <unit-number> vlan-id <vlan-id>`
 
 ## Interface Verification
   * Show operational information regarding interface:
