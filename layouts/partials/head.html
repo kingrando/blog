@@ -1,13 +1,29 @@
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{ if .IsPage }} {{ .Title }} {{ else }} {{ .Site.Title }} {{ end }}</title>
+  {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- {{ $bulmacss := "css/bulma.min.css" | absURL }}
-  <link rel="stylesheet" type="text/css" href="{{ $bulmacss }}"> -->
-  {{ $style := resources.Get "sass/main.scss" | resources.ToCSS }}
-  <link rel="stylesheet"  href="{{ $style.Permalink }}">
-  {{ $css := "css/styles.css" | absURL }}
-  <link rel="stylesheet" type="text/css" href="{{ $css }}">
-  {{ $js := "js/main.js" | absURL }}
-  <script src="{{ $js }}"></script>
-  <title>{{ .Site.Title }} - {{ .Title }}</title> 
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
+  {{ .Scratch.Set "colortheme" "white"}}
+  {{ if .Site.Params.Colortheme }}
+    {{ .Scratch.Set "colortheme" .Site.Params.Colortheme }}
+  {{ end }}
+  <link rel="stylesheet" href="{{ "css/styles.css" | absURL }}">
+  {{ `
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  ` | safeHTML }}
+
+  {{ partial "favicon.html" . }}
+  {{ if .Site.Params.rss }}
+  {{ with .OutputFormats.Get "RSS" }}
+    {{ printf `<link href="%s" rel="%s" type="%s" title="%s" />` .Permalink .Rel .MediaType.Type $.Site.Title | safeHTML }}
+  {{ end }}
+  {{ end }}
 </head>

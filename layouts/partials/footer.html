@@ -1,5 +1,20 @@
-<footer class="footer">
-  <div class="content has-text-centered">
-    <p>© {{ .Site.Copyright }} | Built using <a href="https://gohugo.io/">Hugo</a> | Deployed using <a href="https://azure.microsoft.com/en-us/services/app-service/static/">Azure Static Web Apps</a></p>
+<footer id="footer">
+
+  <div class="footer-top">
+  <span class="footer-left">
+    {{ partial "social.html" . }}
+  </span>
+  <span class="footer-right">
+    Copyright  &copy; {{ now.Format "2006" }} {{ if .Site.Copyright }} {{ print .Site.Copyright }} {{ else }} {{ print .Site.Title }} {{ end }}
+  </span>
+  </div>
+  <div class="footer-bottom">
+    <nav class="footer-nav">
+      <ul>
+        {{ range .Site.Menus.main }} 
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
   </div>
 </footer>

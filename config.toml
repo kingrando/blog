@@ -1,22 +1,7 @@
 baseURL = "https://www.kingrando.com/"
 languageCode = "en-us"
 title = "Kameron Ingrando"
-copyright = "2020 Kameron Ingrando"
-
-[taxonomies]
-tag = "tags"
-
-[params]
-  GithubID = "kingrando"
-  LinkedInID = "kingrando"
-  TwitterID = "KameronIngrando"
-  Email = "kameron.ingrando@gmail.com"
-
-[markup]
-  [markup.highlight]
-    style = "monokailight"
-  [markup.tableOfContents]
-    endLevel = 5
+copyright = "Kameron Ingrando"
 
 [[menu.main]]
 name = "Posts"
@@ -24,29 +9,51 @@ url = "/posts"
 weight = 1
 
 [[menu.main]]
-name = "Zettels"
-url = "/zettels"
-weight = 1
+name = "Notes"
+url = "/notes"
+weight = 2
+
+[[menu.main]]
+name = "Categories"
+url = "/categories"
+weight = 3
 
 [[menu.main]]
 name = "Tags"
 url = "/tags"
-weight = 1
+weight = 4
 
 [[menu.main]]
-name = "Resources"
-url = "/resources"
-weight = 1
+name = "Useful Links"
+url = "/useful-links"
+weight = 5
 
-[related]
-threshold = 80.0
-includeNewer = true
-toLower = false
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 6
 
-  [[related.indices]]
-  name = "id"
-  weight = 100.0
+[params]
+  postSection = "posts"
+  notesSection = "notes"
+  showAllPostsOnHomePage = false
+  postsOnHomePage = 10
+  tagsOverview = false
+  showNotesList = true
 
-  [[related.indices]]
-  name = "tags"
-  weight = 10.0
+[[params.social]]
+  name = "GithubID"
+  link = "kingrando"
+
+[[params.social]]
+  name = "Email"
+  link = "kameron.ingrando@gmail.com"
+
+[[params.social]]
+  name = "LinkedInID"
+  link = "kameroningrando"
+
+[[params.social]]
+  name = "TwitterID"
+  link = "kameroningrando"
+  

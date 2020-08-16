@@ -1,3 +1,12 @@
 [submodule "themes/hugo-theme-pure"]
 	path = themes/hugo-theme-pure
 	url = git@github.com:kingrando/hugo-theme-pure.git
+[submodule "themes/anubis"]
+	path = themes/anubis
+	url = https://github.com/mitrichius/hugo-theme-anubis.git
+[submodule "themescactus"]
+	path = themescactus
+	url = https://github.com/monkeyWzr/hugo-theme-cactus.git
+[submodule "themes/cactus"]
+	path = themes/cactus
+	url = https://github.com/monkeyWzr/hugo-theme-cactus.git
