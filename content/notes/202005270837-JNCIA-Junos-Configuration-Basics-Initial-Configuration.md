@@ -9,17 +9,19 @@ categories:
   - Networking
 ---
 ## Initial Configuration Recommendation
+
 Juniper recommends configuring the following  items when you are first setting up your Junos OS device:
 
-  * The root password
-  * Hostname
-  * System time
-  * Remote access protocols
-  * Management interface and static routes for the management traffic to use the management interface
+* The root password
+* Hostname
+* System time
+* Remote access protocols
+* Management interface and static routes for the management traffic to use the management interface
 
 **Note**: I have labeled my Junos OS devices in my lab as RE1 through RE5 so the hostnames in my commands will reflect that.
 
 ## Configure System Parameters
+
 Perform the following steps:
 
   1. Enter configuration mode:
@@ -33,7 +35,7 @@ Perform the following steps:
   4. Set the hostname
       * `[edit system]`
       * `root@RE1# set host-name hostname`
-  5. Set the timezone & system time
+  5. Set the time zone & system time
       * `[edit system]`
       * `root@RE1# set time-zone <timezone>`
       * `root@RE1# run set date YYYYMMDDhhmm.ss`
@@ -57,4 +59,5 @@ Perform the following steps:
       * `root@RE1# quit`
 
 ## References
-  * [Juniper Open Learning: Junos, Associate](https://cloud.contentraven.com/junosgenius/learningpath-detail/1004/3/0/1)
+
+* [Juniper Open Learning: Junos, Associate](https://cloud.contentraven.com/junosgenius/learningpath-detail/1004/3/0/1)

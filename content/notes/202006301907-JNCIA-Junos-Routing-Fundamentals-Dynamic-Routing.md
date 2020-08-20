@@ -9,11 +9,12 @@ categories:
   - Networking
 ---
 ## Dynamic Routing Protocols
+
 Dynamic Routing Protocols benefits:
 
-  * *Lower administrative overhead* since routes are learned automatically instead of through manual entry.
-  * *Increases network availability* because traffic can be rerouted automatically in the event of an outage.
-  * *Greater network scalability* because dynamically learning routes allows for easier growth and deployment of new routers.
+* *Lower administrative overhead* since routes are learned automatically instead of through manual entry.
+* *Increases network availability* because traffic can be rerouted automatically in the event of an outage.
+* *Greater network scalability* because dynamically learning routes allows for easier growth and deployment of new routers.
 
 There are two primary classifications of dynamic routing protocols:
 
@@ -22,24 +23,24 @@ There are two primary classifications of dynamic routing protocols:
 
 ## Configure OSPF
   
-  * Create OSPF area:
-    * `set ospf area 0`
-  * Assign interfaces to OSPF area:
-    * `set ospf area 0 interface <interface_name>`
+* Create OSPF area:
+  * `set ospf area 0`
+* Assign interfaces to OSPF area:
+  * `set ospf area 0 interface <interface_name>`
 
 ## Verify OSPF
 
-  * Show overview of OSPF information:
-    * `show ospf overview`
-  * Show OSPF routing table:
-    * `show ospf route`
-  * Show OSPF neighbor status information:
-    * `show ospf neighbor`
-  * Show OSPF interface status information:
-    * `show ospf interface`
-  * Show OSPF link-state database:
-    * `show ospf database`
+* Show overview of OSPF information:
+  * `show ospf overview`
+* Show OSPF routing table:
+  * `show ospf route`
+* Show OSPF neighbor status information:
+  * `show ospf neighbor`
+* Show OSPF interface status information:
+  * `show ospf interface`
+* Show OSPF link-state database:
+  * `show ospf database`
 
 ## References
-  * [Juniper Open Learning: Junos, Associate](https://cloud.contentraven.com/junosgenius/learningpath-detail/1004/3/0/1)
 
+* [Juniper Open Learning: Junos, Associate](https://cloud.contentraven.com/junosgenius/learningpath-detail/1004/3/0/1)

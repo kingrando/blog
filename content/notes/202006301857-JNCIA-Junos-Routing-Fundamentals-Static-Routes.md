@@ -9,7 +9,8 @@ categories:
   - Networking
 ---
 ## Notes
-Static routes, or manually entered routes, require at a minimum to be defined as static and associate a next-hop address for the route. 
+
+Static routes, or manually entered routes, require at a minimum to be defined as static and associate a next-hop address for the route.
 
 To create a static route issue the following: `set routing-options static route <destination> next-hop <value>`
 
@@ -20,5 +21,6 @@ It is a best practice to use the `no-readvertise` option on static routes that m
 To verify use: `show route protocol static`
 
 ## References
-  * [Juniper Open Learning: Junos, Associate](https://cloud.contentraven.com/junosgenius/learningpath-detail/1004/3/0/1)
-  * [Configuring Static Routes](https://www.juniper.net/documentation/en_US/junos/topics/topic-map/policy-static-routing.html)
+
+* [Juniper Open Learning: Junos, Associate](https://cloud.contentraven.com/junosgenius/learningpath-detail/1004/3/0/1)
+* [Configuring Static Routes](https://www.juniper.net/documentation/en_US/junos/topics/topic-map/policy-static-routing.html)

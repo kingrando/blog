@@ -9,7 +9,8 @@ categories:
   - Networking
 ---
 ## Context-Sensitive Help
-Used to get the list of commands, options, and user-defined variables that are available in a given context. This is obtained by typing a command out and following it with a ? mark. 
+
+Used to get the list of commands, options, and user-defined variables that are available in a context. This is obtained by typing a command out and following it with a ? mark.
 
 ```bash
 kameron@RE1> show configuration interfaces ge-0/0/?
@@ -22,10 +23,12 @@ Possible completions:
 ```
 
 ## Topical Help
+
 There are 3 types of topical help in Junos: topic, reference, and apropos
 
 ### Help Topic
-Displays usage guidelines for a command. 
+
+Displays usage guidelines for a command.
 
 ```bash
 kameron@RE1> help topic system host-name
@@ -47,7 +50,9 @@ kameron@RE1> help topic system host-name
         * Mapping the Hostname of the Switch to IP Addresses
         * host-name
 ```
+
 ### Help Reference
+
 Displays summary information for the referenced configuration statement.
 
 ```bash
@@ -88,7 +93,8 @@ kameron@RE1> help reference system host-name
 ```
 
 ### Help Apropos
-Displays contexts that reference a specific variable
+
+Displays contexts that reference a specific variable.
 
 ```bash
 kameron@RE1> help apropos system
@@ -116,4 +122,5 @@ clear system errors
 ```
 
 ## References
-  * [Juniper Open Learning: Junos, Associate](https://cloud.contentraven.com/junosgenius/learningpath-detail/1004/3/0/1)
+
+* [Juniper Open Learning: Junos, Associate](https://cloud.contentraven.com/junosgenius/learningpath-detail/1004/3/0/1)

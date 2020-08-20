@@ -9,16 +9,18 @@ categories:
   - Networking
 ---
 ## Interface Details
+
 Interface details can be gathered using the `show interfaces` command and its options. The following are some of the more commonly used interface command options:
 
-  * `show interfaces brief`
-  * `show interfaces descriptions`
-  * `show interfaces detail`
-  * `show interfaces diagnostics`
-  * `show interfaces extensive`
-  * `show interfaces statistics`
-  * `show interfaces summary`
-  * `show interfaces terse` 
+* `show interfaces brief`
+* `show interfaces descriptions`
+* `show interfaces detail`
+* `show interfaces diagnostics`
+* `show interfaces extensive`
+* `show interfaces statistics`
+* `show interfaces summary`
+* `show interfaces terse`
 
 ## References
-  * [Juniper Open Learning: Junos, Associate](https://cloud.contentraven.com/junosgenius/learningpath-detail/1004/3/0/1)
+
+* [Juniper Open Learning: Junos, Associate](https://cloud.contentraven.com/junosgenius/learningpath-detail/1004/3/0/1)
