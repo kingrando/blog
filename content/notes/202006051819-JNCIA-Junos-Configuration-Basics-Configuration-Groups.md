@@ -14,22 +14,56 @@ Configuration groups are a way to create a set of configuration statements, or a
 
 If a setting is explictly configured at a configuration hierarchy and there is a group applied to the hierarchy, the explicit configuration will take precedence.
 
-A configuration item can have multiple groups applied to it but only one apply-groups statement can be set for it. The groups should be ordered in preference of priority: `apply-groups group1 group2`.
+A configuration item can only have one apply-group statement set for it, but that apply-group statement can contain multiple configuration groups. The groups should be ordered in preference of priority: `apply-groups group1 group2`.
 
 ## Configuration
 
 * Create a group
-* `set groups <group-name>`
+
+  ```bash
+  # Command
+  set groups <group-name>
+  # Example
+  set groups ExampleGroup1
+  ```
+
 * Change to the specific hierarchy and apply the group
-* `set apply-groups <group-name>`
+
+  ```bash
+  # Command
+  set apply-groups <group-name>
+  # Example
+  set apply-groups ExampleGroup1
+  ```
 
 ## Verification
 
 * Display the configured group
-* `show configuration groups`
+
+  ```bash
+  # Command
+  [edit]
+  show groups
+  # Output
+  [edit]
+  kameron@RE4# show groups ExampleGroup1
+  system {
+      host-name Example-Hostname;
+  }
+  ```
+
 * Display the applied groups
-* `show configuration configuration-item apply-groups`
-  * Example: `show configuration interfaces ge-0/0/0 apply-groups`
+
+  ```bash
+  # Command
+  [edit]
+  show apply-groups
+  # Output
+  [edit]
+  kameron@RE4# show apply-groups
+  ## Last changed: 2020-08-21 17:57:47 CDT
+  apply-groups [ ExampleGroup1 ];
+  ```
 
 ## References
 

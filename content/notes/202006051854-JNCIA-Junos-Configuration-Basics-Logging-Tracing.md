@@ -24,16 +24,68 @@ Syslog files are stored in `/var/log/`. The primary syslog file is located at `/
 ### Logging Configuration
 
 * Configure the host, facility, and severity level
-  * `set system syslog host <ip-address> <facility> <severity>`
+
+  ```bash
+  # Command
+  set system syslog host <ip-address> <facility> <severity>
+  # Example
+  set system syslog host 10.0.0.1 firewall alerts
+  ```
+
 * Specify a filename to capture logs (Optional)
-  * `set system syslog file <file-name>`
+
+  ```bash
+  # Command
+  set system syslog file <file-name> <facility> <severity>
+  # Example
+  set system syslog file my_firewall_alerts.log firewall alerts
+  ```
+
 * Specify the maximum size of the log file
-  * `set system syslog file <file-name> archive size <size>`
+
+  ```bash
+  # Command
+  set system syslog file <file-name> archive size <size>
+  # Example
+  set system syslog file my_firewall_alerts.log archive size 1000000
+  ```
 
 ### Logging Verification
 
+* Show configuration
+
+  ```bash
+  # Command
+  [edit]
+  show system syslog
+  # Output
+  kameron@RE4# show system syslog
+  host 10.0.0.1 {
+      firewall alert;
+  }
+  file my_firewall_alerts.log {
+      firewall alert;
+      archive size 1000000;
+  }
+  ```
+
 * Check the messages code:
-  * `help syslog <message-code>`
+
+  ```bash
+  # Command
+  help syslog <message-code>
+  # Example
+  kameron@RE4> help syslog BOOTPD_ARG_ERR
+  Name:          BOOTPD_ARG_ERR
+  Message:       Ignoring unknown option -<option>
+  Help:          Command-line option was invalid
+  Description:   The indicated option was provided on the 'tnp.bootpd' command line and is invalid. The boot parameter process (tnp.bootpd) initialized but
+                ignored the invalid option.
+  Type:          Error: An error occurred
+  Severity:      warning
+  Facility:      ANY
+  Action:        Remove the invalid option from the 'tnp.bootpd' command line.
+  ```
 
 ## Tracing
 
@@ -61,7 +113,13 @@ Interface tracing operations defines tracing for individual router interfaces an
 ### Tracing Configuration
 
 * Enable remote tracing
-  * `set system tracing destination-override syslog host ipv4-address`
+
+  ```bash
+  # Command
+  set system tracing destination-override syslog host <address>
+  # Example
+  set system tracing destination-override syslog host 10.0.0.1
+  ```
 
 To override the system-wide remote tracing configuration for a process include the no-remote-trace statement at the `[edit process-name traceoptions]` hierarchy. When no-remote-trace is enabled, the process does local tracing.
 

@@ -26,11 +26,11 @@ The Junos OS uses a default VT100 terminal types for commands and arrow keys. Th
 
 * `Ctrl+b` - Left one character
 * `Ctrl+a` - Beginning of line
-* `Ctrl+a` - Right one character
+* `Ctrl+f` - Right one character
 * `Ctrl+e` - End of line
 * `Ctrl+d` - Deletes the character over the cursor
 * `Ctrl+k` - Deletes from the cursor to the end of the line
-* `Ctrl+u`- Deletes all characters and negates the current command
+* `Ctrl+u` - Deletes all characters and negates the current command
 * `Ctrl+w` - Deletes the entire word to the left of the cursor
 * `Ctrl+l` - Redraws the current line
 * `Ctrl+p` - Repeats the previous command in the command history
@@ -44,13 +44,13 @@ The Junos OS uses a default VT100 terminal types for commands and arrow keys. Th
 Since the Junos OS is a hierarchy configuration, you can move between the hierarchy levels. The following options are available to move between levels:
 
 * `edit` - Used to specify your desired hierarchy level.
-  * **Example**: edit interfaces ge-0/0/0.0
+  * **Example**: `edit interfaces ge-0/0/0.0`
 * `up` - Moves you up one level in the configuration.
-  * **Example**: if you are at `[edit interfaces ge-0/0/0 unit 0]` and we issue the up command, it will take us to `[edit interfaces ge-0/0/0]`
-* `up n` - Moves you up the number placed at n.
-  * **Example**: if you are at `[edit interfaces ge-0/0/0 unit 0]` and we issue the command up 3, it will take us to `[edit]`
+  * **Example**: if you are at `[edit interfaces ge-0/0/0 unit 0]` and we issue the `up` command, it will take us to `[edit interfaces ge-0/0/0]`
+* `up n` - Moves you up the number placed at *n*.
+  * **Example**: if you are at `[edit interfaces ge-0/0/0 unit 0]` and we issue the command `up 3`, it will take us to `[edit]`
 * `top` - Moves to the top of the configuration hierarchy.
-  * **Example**: if we are at `[edit interfaces ge-0/0/0 unit 0 family inet]` and we issue the command top, it will take us to `[edit]`
+  * **Example**: if we are at `[edit interfaces ge-0/0/0 unit 0 family inet]` and we issue the command `top`, it will take us to `[edit]`
 * `exit` - Returns the user to the most recent, higher level hierarchy.
   * **Example**: if we are at `[edit interfaces ge-0/0/0 unit 0]` and we navigate to `[edit family inet]` and then issue the exit command, it will take us to `[edit interfaces ge-0/0/0 unit 0]`
 

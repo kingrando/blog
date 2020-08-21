@@ -28,7 +28,7 @@ The following commands are used to modify configuration statements:
 
 * `set` - Adds configuration statements
 * `delete` - Removes commands that were added with the set command. Returns to the default condition.
-* `deactivate` - Causes the specified configuration hierarchy to be ignored while retaining the original configuration.
+* `deactivate` - Causes the specified configuration hierarchy to be ignored while retaining the original configuration. When used on an interface, this leaves the interface in an up/up state but just makes the configuration at that level inactive. For example, if you deactivated an interface that had an IP, it would not use that IP anymore but still show up as up/up in `terse` output.
 * `active` - Places the deactivated command back into effect.
 
 ## References

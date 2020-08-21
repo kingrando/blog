@@ -22,6 +22,8 @@ system {
                 encrypted-password ""; ## SECRET-DATA
             }
         }
+    }
+}
 ```
 
 When creating a new local user, the following password requirements must be met:
@@ -44,7 +46,7 @@ When a user is created, a working directory is created for that user.
 
 If you want to change the working directory for a user, you can issue the following command:
 
-* `root@RE1> set cli directory directory`
+* `root@RE1> set cli directory <directory>`
   
 You can view the current working directory using:
 
@@ -83,7 +85,7 @@ Authentication is done in the order that is set in the authentication-order comm
 
 RADIUS or TACACS+ authentication can fail because the authentication servers:
 
-* Are not configured.
+* Are not configured
 * Do not respond within the timeout period
 * Are not reachable over the network
 
@@ -104,8 +106,8 @@ To configure RADIUS, you must issue the following commands:
       * `set port port-number`
   1. Specify the authentication order
   
-      * `set system authentication-order radius`
-      * `insert system authentication-order password after radius`
+      * `set system authentication-order [radius password]`
+
   1. Assign a login class for remote users
   
       * `set system login user remote class <class>`
@@ -139,32 +141,32 @@ On the RADIUS server, the Juniper VSA (Vendor-Specific-Attribute) of Juniper-Loc
 
 * Display the configured authentication order
 
- ```bash
- [edit]
- user@host# show system authentication-order authentication-order [password | radius | tacplus];
- ```
+  ```bash
+   [edit]
+   user@host# show system authentication-order authentication-order [password | radius | tacplus]
+   ```
 
 * Display the configured radius-server
 
- ```bash
- [edit]
- user@host# show system radius-server
- 192.168.30.12 {
-     secret Radiussecret1;
-     source-address 192.168.30.52;
- }
- ```
+  ```bash
+  [edit]
+  user@host# show system radius-server
+  192.168.30.12 {
+      secret Radiussecret1;
+      source-address 192.168.30.52;
+  }
+  ```
 
 * Display the configured TACACS+ server
 
- ```bash
- [edit]
- user@host# show system tacplus-server
- 192.168.30.12 {
-     secret Tacacssecret1;
-     source-address 192.168.30.52;
- }
- ```
+  ```bash
+  [edit]
+  user@host# show system tacplus-server
+  192.168.30.12 {
+      secret Tacacssecret1;
+      source-address 192.168.30.52;
+  }
+  ```
 
 ## References
 

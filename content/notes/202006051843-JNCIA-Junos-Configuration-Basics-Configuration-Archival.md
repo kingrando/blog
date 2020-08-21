@@ -23,16 +23,48 @@ The destination filename is saved in the following format, where n corresponds
 ## Configuration
 
 * Configure the archival sites (HTTP, FTP, or SCP)
-  * `set system archival configuration archive-sites <url>`
+
+  ```bash
+  # Command
+  set system archival configuration archive-sites <url>
+  # Example
+  set system archival configuration archive-sites ftp://10.0.0.1
+  ```
+
 * Configure the transfer interval
-  * `set system archival configuration transfer-interval <15-2880 minutes>`
+
+  ```bash
+  # Command
+  set system archival configuration transfer-interval <15-2880 minutes>
+  # Example
+  set system archival configuration transfer-interval 60
+  ```
+
 * Configure the option to transfer on commit
-  * `set system archival configuration transfer-on-commit`
+
+  ```bash
+  # Command
+  set system archival configuration transfer-on-commit
+  ```
 
 ## Verification
 
 * List files queued up for archive transfer
-  * `show system configuration archival`
+
+  ```bash
+  # Command
+  [edit]
+  show system archival
+  # Output
+  [edit]
+  kameron@RE4# show system archival
+  configuration {
+      transfer-interval 60;
+      archive-sites {
+          ftp://10.0.0.1;
+      }
+  }
+  ```
 
 ## References
 
