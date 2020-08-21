@@ -18,7 +18,7 @@ Junos OS provides two ways to complete commands using the CLI.
        * `set cli complete-on-space off`
   1. Tab
      * Completes commands and variables such as policy names, AS paths, community names, and IP addresses.
-     * **Example**: if an interface has an IP address configured on it, the following command can be entered followed by tab: set interface ge-0/0/0 unit 0 family inet address 1 , followed by tab and it will complete to set interface ge-0/0/0 unit 0 family inet address 10.0.1.1/30 or whatever the IP address is set to.
+     * **Example**: if an interface has an IP address configured on it, the following command can be entered followed by tab: `set interface ge-0/0/0 unit 0 family inet address 1` , followed by tab and it will complete to `set interface ge-0/0/0 unit 0 family inet address 10.0.1.1/30` or whatever the IP address is set to.
 
 ## Editing Command Lines
 
