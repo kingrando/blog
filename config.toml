@@ -64,9 +64,12 @@ weight = 7
   
 [markup]
   [markup.highlight]
-    codeFences = false
-    guessSyntax = true
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
     lineNoStart = 1
     lineNos = true
     lineNumbersInTable = true
-    style = "dracula"
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4
