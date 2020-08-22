@@ -16,7 +16,9 @@ Device storage can become cluttered with:
 * Old software versions
 * Temporary files
 
-If it becomes cluttered then cleaning up the storage will be necessary. To do this you can issue the following command: `request system storage cleanup [dry-run]`.
+If it becomes cluttered then cleaning up the storage will be necessary. To do this you can issue the following command:
+
+* `request system storage cleanup [dry-run]`
 
 ## System Clean-Up
 

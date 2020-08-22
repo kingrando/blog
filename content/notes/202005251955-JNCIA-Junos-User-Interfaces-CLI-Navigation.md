@@ -44,15 +44,54 @@ The Junos OS uses a default VT100 terminal types for commands and arrow keys. Th
 Since the Junos OS is a hierarchy configuration, you can move between the hierarchy levels. The following options are available to move between levels:
 
 * `edit` - Used to specify your desired hierarchy level.
-  * **Example**: `edit interfaces ge-0/0/0.0`
+
+  ```bash
+  [edit]
+  kameron@RE4# edit interfaces ge-0/0/0
+
+  [edit interfaces ge-0/0/0]
+  kameron@RE4#
+  ```
+
 * `up` - Moves you up one level in the configuration.
-  * **Example**: if you are at `[edit interfaces ge-0/0/0 unit 0]` and we issue the `up` command, it will take us to `[edit interfaces ge-0/0/0]`
+
+  ```bash
+  [edit interfaces ge-0/0/0 unit 0 family inet]
+  kameron@RE4# up
+
+  [edit interfaces ge-0/0/0 unit 0]
+  kameron@RE4#
+  ```
+
 * `up n` - Moves you up the number placed at *n*.
-  * **Example**: if you are at `[edit interfaces ge-0/0/0 unit 0]` and we issue the command `up 3`, it will take us to `[edit]`
+  
+  ```bash
+  [edit interfaces ge-0/0/0 unit 0]
+  kameron@RE4# up 2
+
+  [edit interfaces]
+  kameron@RE4#
+  ```
+
 * `top` - Moves to the top of the configuration hierarchy.
-  * **Example**: if we are at `[edit interfaces ge-0/0/0 unit 0 family inet]` and we issue the command `top`, it will take us to `[edit]`
+
+  ```bash
+  [edit interfaces ge-0/0/0 unit 0 family inet]
+  kameron@RE4# top
+
+  [edit]
+  kameron@RE4#
+  ```
+
 * `exit` - Returns the user to the most recent, higher level hierarchy.
-  * **Example**: if we are at `[edit interfaces ge-0/0/0 unit 0]` and we navigate to `[edit family inet]` and then issue the exit command, it will take us to `[edit interfaces ge-0/0/0 unit 0]`
+
+  ```bash
+  [edit interfaces ge-0/0/0]
+  kameron@RE4# exit
+
+  [edit]
+  kameron@RE4#
+  ```
 
 ## References
 

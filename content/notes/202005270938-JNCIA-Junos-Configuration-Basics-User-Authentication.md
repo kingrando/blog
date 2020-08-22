@@ -35,9 +35,24 @@ When creating a new local user, the following password requirements must be met:
 ### Local User Configuration
 
 * Create a new user
-  * `set system login user <username> authentication plain-text-password`
+
+  ```bash
+  # Command
+  set system login user <username> authentication plain-text-password
+  # Example
+  set system login user kameron authentication plain-text-password
+  New password:
+  Retype new password:
+  ```
+
 * Set the login class for a user
-  * `set system login user <username> class [<user-defined-class> | operator | read-only | super-user | authorized]`
+
+  ```bash
+  # Command
+  set system login user <username> class [<user-defined-class> | operator | read-only | super-user | authorized]
+  # Example
+  set system login user kameron class super-user
+  ```
 
 When a user is created, a working directory is created for that user.
 
@@ -46,11 +61,20 @@ When a user is created, a working directory is created for that user.
 
 If you want to change the working directory for a user, you can issue the following command:
 
-* `root@RE1> set cli directory <directory>`
+```bash
+# Command (Operational Mode)
+set cli directory <directory>
+# Example
+set cli directory /tmp/var/my_new_working_directory
+```
   
 You can view the current working directory using:
 
-* `root@RE1> show cli directory`
+```bash
+# Command (Operational Mode)
+kameron@RE4> show cli directory
+Current directory: /var/home/kameron
+```
 
 ## RADIUS and TACACS+
 
@@ -62,8 +86,12 @@ When RADIUS is used for authentication, the Junos device can apply a local user 
 
 To create a local template, perform the following:
 
-* `set system login user <template-name> class [<user-defined-class> | operator | read-only | super-user | authorized]`
-* `set system login user remote-read-only class read-only`
+```bash
+# Command
+set system login user <template-name> class [<user-defined-class> | operator | read-only | super-user | authorized]
+# Example
+set system login user remote-=user class read-only
+```
 
 ### Authentication Order
 
@@ -71,15 +99,30 @@ The authentication order is set using the `authentication-order` statement.
 
 To set the authentication order issue the following command:
 
-* `set system authentication-order [password | radius | tacplus]`
+```bash
+# Command
+set system authentication-order <method or group of methods>
+# Example
+set system authentication-order [radius password]
+```
 
 To add an additional authentication method:
 
-* `insert system authentication-order [password | radius | tacplus] [before | after] [password | radius | tacplus]`
+```bash
+# Command
+insert system authentication-order [password | radius | tacplus] [before | after] [password | radius | tacplus]
+# Example
+insert system authentication-order tacplus before password
+```
 
 To remove an authentication method:
 
-* `delete system authentication-order [password | radius | tacplus]`
+```bash
+# Command
+delete system authentication-order [password | radius | tacplus]
+# Example
+delete system authentication-order tacplus
+```
 
 Authentication is done in the order that is set in the authentication-order command. If a login is not found in the radius or tacacs server then the local user database is tried.
 
@@ -94,31 +137,55 @@ RADIUS or TACACS+ authentication can fail because the authentication servers:
 To configure RADIUS, you must issue the following commands:
 
   1. Add an IPv4 or IPv6 server address:
+
+```bash
+# Command
+set system radius-server <server-address>
+# Example
+set system radius-server 10.0.0.1
+```
   
-      * `set system radius-server <server-address> source-address <source-address>`
   1. Set the shared secret
-  
-      * `[edit system radius-server <server-address>]`
-      * `set secret secret`
+
+```bash
+# Command
+set radius-server <server-address> secret <secret>
+# Example
+set radius-server 10.0.0.1 secret Temp1234
+```
+
   1. (Optional) Specify a port number
+
+```bash
+# Command
+set radius-server <server-address> port <port-number>
+# Example
+set radius-server 10.0.0.1 port 1812
+```
   
-      * `[edit system radius-server <server-address>]`
-      * `set port port-number`
   1. Specify the authentication order
-  
-      * `set system authentication-order [radius password]`
 
+```bash
+# Command
+set system authentication-order [radius password]
+```
+  
   1. Assign a login class for remote users
-  
-      * `set system login user remote class <class>`
 
+```bash
+# Command
+set system login user <user-template-name> class <class>
+# Example
+set system login user remote class read-only
+```
+  
 #### Setup FreeRADIUS for testing
 
 Setup the FreeRADIUS server using the Getting Started guide found [here](https://wiki.freeradius.org/guide/Getting%20Started).
 
- Edit the file `/etc/freeradius/3.0/clients.conf` and add the switch or router:
+Edit the file `/etc/freeradius/3.0/clients.conf` and add the switch or router:
 
- ```bash
+```bash
 client re1 {
         ipaddr = 192.168.30.52
         secret = juniper1234

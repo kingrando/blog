@@ -52,6 +52,8 @@ The chassis can be monitored using the `show chassis` command hierarchy. The fol
   * `show chassis hardware`
 * Displays operational status and utilization details of the routing engines
   * `show chassis routing-engine`
+* Display the contents of the front panel screen
+  * `show chassis craft-interface`
 
 ## Monitoring Device Traffic
 

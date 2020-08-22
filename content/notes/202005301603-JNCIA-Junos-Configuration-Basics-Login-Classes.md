@@ -25,8 +25,12 @@ Custom login classes can be set which grant the ability to:
 
 To define a custom login class, perform the following:
 
-* `set system login class <class-name>`
-* `set system login class <class-name> <settings>`
+```bash
+# Commands
+set system login class <class-name> <settings>
+# Example
+set system login class Example-Class-Name permissions view
+```
 
 ## References
 

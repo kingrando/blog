@@ -40,17 +40,17 @@ To upgrade the OS, issue the following command: `request system software add pat
 
 ## Unified In-Service Software Upgrade (ISSU)
 
-Unified ISSU allows you to upgrade between two different Junos OS versions without interruption to the control plane. This eliminates the need for downtime during software upgrade therefore reducing operational costs and delivering higher service levels.
+Unified ISSU allows you to upgrade between two different Junos OS versions without interruption to the control plane. This eliminates the need for downtime during software upgrades therefore reducing operational costs and delivering higher service levels.
 
 This feature is only available on dual Routing Engine (RE) devices.
 
 The process to perform an ISSU is:
 
-  1. Enable Graceful Routing Engine Switchover (GRES) and Nonstop Active Routing (NSR).
-  2. Verify the Routing Engines (REs) and protocols are synchronized.
-  3. Download the new software package.
-  4. Copy the software package to the device.
-  5. Issue the command `request system software in-service-upgrade` on the master RE.
+  1. Enable Graceful Routing Engine Switchover (GRES) and Nonstop Active Routing (NSR)
+  2. Verify the Routing Engines (REs) and protocols are synchronized
+  3. Download the new software package
+  4. Copy the software package to the device
+  5. Issue the command `request system software in-service-upgrade` on the master RE
 
 ## References
 

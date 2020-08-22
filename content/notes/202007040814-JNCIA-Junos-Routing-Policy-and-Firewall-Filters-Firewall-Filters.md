@@ -53,9 +53,20 @@ A firewall filter is made up of the following components:
   * **Terms**: Terms contain the match conditions and actions.
     * **Match Condition**: The *from* statement contains what should be matched.
     * **Action**: The *then* statement contains the action to take once the condition has been matched. There are three types of actions:
-      * **Terminating Actions**: Performs the action and then halts any more processing of the packet.
+      * **Terminating Actions**: Performs the action and then halts any more processing of the packet. Examples include accept, discard, and reject.
       * **Non-terminating Actions**: Performs stuff such as counting packets, logging information, or sampling packets.
       * **Flow Control Actions**: Enables the next term to be evaluated instead of performing a terminating action.
+
+### Standard Filter Example
+
+```bash
+# Command
+set firewall family <protocol> filter <fitler-name> term <term-name> from <condition>
+set firewall family <protocol> filter <fitler-name> term <term-name> then <action>
+# Example
+set firewall family inet filter Example-Filter term Example-Term from source-address 10.0.0.0/24
+set firewall family inet filter Example-Filter term Example-Term then discard
+```
 
 ## Application
 
@@ -68,14 +79,31 @@ Once a firewall filter has been configured, you must apply it to an application 
 To apply firewall filters, use the following command(s) at the interface hierarchy:
 
 * Standard Firewall Filter:
-  * `[edit interfaces ge-0/0/0 unit 0]` or `[edit interfaces ge-0/0/0 unit 0 family inet]`
-  * `set filter [input | input-filter-list | output | output-filter-list ] <filter-name>`
+
+```bash
+# Command (does not require a family to be specified)
+set interfaces <interface-name> unit <unit-number> family <family> filter <direction> <filter-name>
+# Example
+set interfaces ge-0/0/0 unit 0 family inet filter input Example-Filter
+```
+
 * Service Filter:
-  * `[edit interfaces ge-0/0/0 unit 0 family inet]`
-  * `set service input post-service-filter <filter-name>`
-* Simple Firewall Filter:
-  * `[edit interfaces ge-0/0/0 unit 0 family inet]`
-  * `set simple-filter <filter-name>`
+
+```bash
+# Command
+set interfaces <interface-name> unit <unit-number> family <family> service <direction> post-service-filter <filter-name>
+# Example
+set interfaces ge-0/0/0 unit 0 family inet service input post-service-filter Example-Filter
+```
+
+* Simple Filter:
+
+```bash
+# Command
+set interfaces <interface-name> unit <unit-number> family inet simple-filter input <filter-name>
+# Example
+set interfaces ge-0/0/0 unit 0 family inet simple-filter input Example-Filter
+```
 
 ## Policing
 
@@ -85,9 +113,14 @@ Rate limits can be applied to bandwidth or the maximum burst size. Bandwidth can
 
 An example for configuring a policer you use the following commands at the `firewall` hierarchy:
 
-* `[edit firewall]`
-* `set policer Example-Policer logical-bandwidth-policer if-exceeding bandwidth-percent 75`
-* `set policer Example-Policer then discard`  
+```bash
+# Command
+set firewall policer <name> <policer-type> [if-exceeding | if-exceeding-pps] <limit-type> <limit>
+set firewall policer <name> then <action>
+# Example
+set firewall policer Example-Policer logical-bandwidth-policer if-exceeding bandwidth-percent 75
+set firewall policer Example-Policer then discard
+```
 
 ## Unicast RPF Check
 
@@ -100,15 +133,19 @@ The two types of Unicast RPF Checks are:
 
 There are a few caveats with Unicast RPF checks:
 
-  1. When you have asymmetric routes, uRPF could cause legitimate traffic to be dropped. You want to use the feasible-paths option to consider all paths and not just the active routes
-  2. Typically only want to enable on the edge device in the network and not on all network devices in your network.
-  3. A packet is discarded by default if it fails the RPF check. You can bypass this by using the fail-filter. The fail-filter is required to permit DHCP or BOOTP traffic denied by RPF
+* When you have asymmetric routes, uRPF could cause legitimate traffic to be dropped. You want to use the `feasible-paths` option to consider all paths and not just the active routes.
+  * `set routing-options forwarding-table unicast-reverse-path feasible-paths`
+* Typically only want to enable on the edge device in the network and not on all network devices in your network.
+* A packet is discarded by default if it fails the RPF check. You can bypass this by using the `fail-filter`. The `fail-filter` is required to permit DHCP or BOOTP traffic denied by RPF
 
 To configure RPF Check:
 
-* Reverse packet forwarding (RPF) check filter:
-  * `[edit interfaces ge-0/0/0 unit 0 family inet]`
-  * `set rpf-check fail-filter <filter-name>`
+```bash
+# Command
+set interfaces <interface-name> unit <unit-number> family <type> rpf-check fail-filter <name>
+# Example
+set interfaces ge-0/0/0 unit 0 family inet rpf-check fail-filter Example-RPF-Filter
+```
 
 ## References
 

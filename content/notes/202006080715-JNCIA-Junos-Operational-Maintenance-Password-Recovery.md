@@ -14,11 +14,11 @@ Passwords can be recovered on the device but only through a console connection. 
 
 To reset the password, perform the following:
 
-  1. Reboot the system.
-  2. Press the spacebar when prompted.
-  3. When the system shows the `loader>` then enter `boot -s` to enter single-user mode.
+  1. Reboot the system
+  2. Press the spacebar when prompted
+  3. When the system shows the `loader>` then enter `boot -s` to enter single-user mode
   4. Enter recovery mode: `recovery`
-  5. Reset the root password.
+  5. Reset the root password
      1. `configure`
      2. `set system root-authentication plain-text-password`
      3. `commit`

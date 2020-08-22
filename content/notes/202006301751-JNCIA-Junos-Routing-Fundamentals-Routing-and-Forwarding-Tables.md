@@ -29,7 +29,7 @@ When looking at a routing table, an `*` denotes an active route.
 To view the routing table use: `show route`
 
 ```bash
-kameron@RE2> show route
+kameron@RE4> show route
 
 inet.0: 16 destinations, 16 routes (16 active, 0 holddown, 0 hidden)
 + = Active Route, - = Last Active, * = Both
@@ -47,6 +47,37 @@ inet.0: 16 destinations, 16 routes (16 active, 0 holddown, 0 hidden)
 To enable devices to make faster decisions, a subset of the routing table is stored in the Forwarding Table. This table includes the destination prefixes and the outgoing interface used for that prefix.
 
 To view the forwarding table use: `show route forwarding-table`
+
+```bash
+kameron@RE4> show route forwarding-table
+Routing table: default.inet
+Internet:
+Enabled protocols: Bridging,
+Destination        Type RtRef Next hop           Type Index    NhRef Netif
+default            perm     0                    rjct       36     1
+0.0.0.0/32         perm     0                    dscd       34     1
+1.1.1.1/32         user     0 10.0.3.1           ucst      618     7 ge-0/0/1.0
+2.2.2.2/32         user     0 10.0.3.1           ucst      618     7 ge-0/0/1.0
+3.3.3.3/32         user     0 10.0.4.2           ucst      577     5 ge-0/0/0.0
+4.4.4.4/32         intf     0 4.4.4.4            locl      512     1
+5.5.5.5/32         user     0 10.0.4.2           ucst      577     5 ge-0/0/0.0
+10.0.0.0/30        user     0 10.0.3.1           ucst      618     7 ge-0/0/1.0
+10.0.1.0/30        user     0 10.0.3.1           ucst      618     7 ge-0/0/1.0
+10.0.2.0/30        user     0 10.0.3.1           ucst      618     7 ge-0/0/1.0
+10.0.3.0/30        intf     0                    rslv      609     1 ge-0/0/1.0
+10.0.3.0/32        dest     0 10.0.3.0           recv      607     1 ge-0/0/1.0
+10.0.3.1/32        dest     0 50:0:0:4:0:3       ucst      618     7 ge-0/0/1.0
+10.0.3.2/32        intf     0 10.0.3.2           locl      608     2
+10.0.3.2/32        dest     0 10.0.3.2           locl      608     2
+10.0.3.3/32        dest     0 10.0.3.3           bcst      606     1 ge-0/0/1.0
+10.0.4.0/30        intf     0                    rslv      605     1 ge-0/0/0.0
+10.0.4.0/32        dest     0 10.0.4.0           recv      603     1 ge-0/0/0.0
+10.0.4.1/32        intf     0 10.0.4.1           locl      604     2
+10.0.4.1/32        dest     0 10.0.4.1           locl      604     2
+10.0.4.2/32        dest     0 50:0:0:b:0:2       ucst      577     5 ge-0/0/0.0
+10.0.4.3/32        dest     0 10.0.4.3           bcst      602     1 ge-0/0/0.0
+10.0.5.0/30        user     0 10.0.4.2           ucst      577     5 ge-0/0/0.0
+```
 
 An ICMP destination unreachable message is sent by the router if an incoming packet matches the default forwarding entry.
 

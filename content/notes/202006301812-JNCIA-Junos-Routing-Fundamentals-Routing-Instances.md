@@ -10,7 +10,7 @@ categories:
 ---
 ## Routing Instance
 
-A routing instance is defined as a group of routing tables, interfaces, and protocol parameters. The routing instance is then used to control what information is in the routing table.
+A routing instance is defined as a group of routing tables, interfaces, and protocol parameters which is then used to control what information is in that routing table.
 
 **Note:** There can only be one instance of each protocol per routing table.
 
@@ -28,63 +28,97 @@ There are 12 types of Routing Instances that can be configured:
 * Layer2 VPN
 * MPLS forwarding
 * Nonforwarding
-* Virtual router
+* Virtual router (This is the VRF)
 * Virtual switch
 * VPLS
 * VRF
 
-A routing instance can be specified under the `[edit routing-instances <routing-instance-name>]` hierarchy with the `set instance-type <type>` command.
+## Configuration
 
-Along with the instance type, the interfaces you wish to be in the routing instance must be specified. This is configured under the `[edit routing-instances <routing-instance-name>]` hierarchy with the `set interface <interface-name>` command.
+* Create a routing instance
+
+  ```bash
+  # Command
+  set routing-instances <instance-name>
+  # Example
+  set routing-instances Instance-Example
+  ```
+
+* Configure the routing instance type
+
+  ```bash
+  # Command
+  set routing-instances <instance-name> instance-type <instance-type>
+  # Example
+  set routing-instances Instance-Example instance-type virtual-router
+  ```
+
+* Assign interfaces to the routing instance
+
+  ```bash
+  # Command
+  set routing-instances <instance-name> interface <interface-name>
+  # Example
+  set routing-instances Instance-Example interface ge-0/0/0 unit 0
+  ```
 
 ## Example
 
-Create an additional OSPF Routing Instance
+* Create an additional OSPF Routing Instance
 
-* Create routing instance:
-  * `set routing-instances <instance-name> instance-type virtual-router`
-  * `set routing-instances Network_10 instance-type virtual-router`
-* Assign interfaces to the routing instance:
-  * `set routing-instances <instance-name> interface <interface-id>`
-  * `set routing-instances Network_10 interface ge-0/0/0.10`
-  * `set routing-instances Network_10 interface lo0.10`
-* Setup the OSPF area:
-  * `set routing-instances <instance-name> protocols ospf area <area> interface <interface-id>`
-  * `set routing-instances Network_10 protocols ospf area 0.0.0.0 interface ge-0/0/0.10`
-  * `set routing-instances Network_10 protocols ospf area 0.0.0.0 interface lo0.10`
+  ```bash
+  # Create routing instance
+  set routing-instances Network_10 instance-type virtual-router
 
-```bash
-kameron@RE3> show route
+  # Assign interfaces to the routing instance
+  set routing-instances Network_10 interface ge-0/0/0.10
+  set routing-instances Network_10 interface lo0.10
 
-Net_10.inet.0: 7 destinations, 7 routes (7 active, 0 holddown, 0 hidden)
-+ = Active Route, - = Last Active, * = Both
+  #Setup the OSPF area
+  set routing-instances Network_10 protocols ospf area 0.0.0.0 interface ge-0/0/0.10
+  set routing-instances Network_10 protocols ospf area 0.0.0.0 interface lo0.10
+  ```
 
-10.0.10.0/30       *[OSPF/10] 00:00:16, metric 2
-                    > to 10.0.12.1 via ge-0/0/0.10
-10.0.12.0/30       *[Direct/0] 00:00:33
-                    > via ge-0/0/0.10
-10.0.12.2/32       *[Local/0] 00:00:33
-                      Local via ge-0/0/0.10
-11.11.11.11/32     *[OSPF/10] 00:00:16, metric 1
-                    > to 10.0.12.1 via ge-0/0/0.10
-12.12.12.12/32     *[OSPF/10] 00:00:16, metric 2
-                    > to 10.0.12.1 via ge-0/0/0.10
-13.13.13.13/32     *[Direct/0] 00:00:33
-                    > via lo0.10
-224.0.0.5/32       *[OSPF/10] 00:00:34, metric 1
-                      MultiRecv
+## Verification
 
-kameron@RE3> show route instance
-Instance             Type
-         Primary RIB                                     Active/holddown/hidden
-master               forwarding
-         inet.0                                          17/0/0
-         inet6.0                                         1/0/0
+* Display the routing table
 
-Net_10               virtual-router
-         Net_10.inet.0                                   7/0/0
-         Net_10.inet6.0                                  1/0/0
-```
+  ```bash
+  kameron@RE3> show route
+
+  Net_10.inet.0: 7 destinations, 7 routes (7 active, 0 holddown, 0 hidden)
+  + = Active Route, - = Last Active, * = Both
+
+  10.0.10.0/30       *[OSPF/10] 00:00:16, metric 2
+                      > to 10.0.12.1 via ge-0/0/0.10
+  10.0.12.0/30       *[Direct/0] 00:00:33
+                      > via ge-0/0/0.10
+  10.0.12.2/32       *[Local/0] 00:00:33
+                        Local via ge-0/0/0.10
+  11.11.11.11/32     *[OSPF/10] 00:00:16, metric 1
+                      > to 10.0.12.1 via ge-0/0/0.10
+  12.12.12.12/32     *[OSPF/10] 00:00:16, metric 2
+                      > to 10.0.12.1 via ge-0/0/0.10
+  13.13.13.13/32     *[Direct/0] 00:00:33
+                      > via lo0.10
+  224.0.0.5/32       *[OSPF/10] 00:00:34, metric 1
+                        MultiRecv
+  ```
+
+* Display the routing instances
+
+  ```bash
+  kameron@RE3> show route instance
+  Instance             Type
+          Primary RIB                                     Active/holddown/hidden
+  master               forwarding
+          inet.0                                          17/0/0
+          inet6.0                                         1/0/0
+
+  Net_10               virtual-router
+          Net_10.inet.0                                   7/0/0
+          Net_10.inet6.0                                  1/0/0
+  ```
 
 ## References
 

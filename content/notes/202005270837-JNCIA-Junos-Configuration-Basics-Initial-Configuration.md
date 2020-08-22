@@ -24,39 +24,54 @@ Juniper recommends configuring the following  items when you are first setting u
 
 Perform the following steps:
 
-  1. Enter configuration mode:
-      * `root@RE1> configure`
-  2. Enter system configuration
-      * `[edit]`
-      * `root@RE1# edit system`
-  3. Set the root password:
-      * `[edit system]`
-      * `root@RE1# set root-authentication plain-text-password`
-  4. Set the hostname
-      * `[edit system]`
-      * `root@RE1# set host-name hostname`
-  5. Set the time zone & system time
-      * `[edit system]`
-      * `root@RE1# set time-zone <timezone>`
-      * `root@RE1# run set date YYYYMMDDhhmm.ss`
-  6. Set the login methods
-      * `[edit system]`
-      * `root@RE1# set services ssh`
-  7. Set the CLI session to timeout (it does not timeout by default)
-      * `[edit system]`
-      * `root@RE1# run set cli idle-timeout <0-100000 minutes>`
-      * A setting of 0 will disable the timeout
-  8. Set the login message
-      * `[edit system]`
-      * `root@RE1# set login message "<message>"`
-  9. Commit the changes
-      * `[edit system]`
-      * `root@RE1# commit`
-  10. Exit the configuration mode
-      * `[edit system]`
-      * `root@RE1# exit`
-      * `[edit]`
-      * `root@RE1# quit`
+```bash
+# 1. Enter configuruation Mode
+kameron@RE4> configure
+
+# 2. Enter system-level hierarchy
+[edit]
+kameron@RE4# edit system
+
+# 3. Set the root password
+[edit system]
+kameron@RE4# set root-authentication plain-text-password
+New password:
+Retype new password:
+
+# 4. Set the hostname
+[edit system]
+kameron@RE4# set host-name Example-Name
+
+# 5. Set the time zone
+[edit system]
+kameron@RE4# set time-zone America/Chicago
+
+# 6. Set the date & time
+[edit system]
+kameron@RE4# run set date 202008220828.00
+
+# 7. Set the login methods
+[edit system]
+kameron@RE4# set services ssh
+
+#8. Set the CLI session idle timeout (Not configured by default, 0 disables the timeout)
+[edit system]
+kameron@RE4# run set cli idle-timeout <0-100000 minutes>
+
+#9. Set the login message
+[edit system]
+kameron@RE4# set login message "This is my router message"
+
+# 10. Commit the changes
+[edit system]
+kameron@RE4# commit
+
+# 11. Exit the configuration mode
+[edit system]
+kameron@RE4# exit
+[edit]
+kameron@RE4# quit
+```
 
 ## References
 
