@@ -20,10 +20,3 @@ I've broken my site down into 3 sections:
 ## Disclaimer
 
 Views and opinions expressed here are mine do not reflect any organization I have been or am currently affiliated with unless otherwise specified.
-
-## Site Technologies
-
-* Built with: [Hugo](https://gohugo.io)
-* Hosted on: [Azure Static Web Apps](https://azure.microsoft.com/en-us/services/app-service/static/)
-* Theme: Modified version of [Cactus](https://github.com/monkeyWzr/hugo-theme-cactus)
-* Icons made by: [prettycons](https://www.flaticon.com/authors/prettycons) from [Flaticon](https://www.flaticon.com/)
