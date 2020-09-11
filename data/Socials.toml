@@ -1,0 +1,34 @@
+[[socials]]
+    id = "rss"
+    url = "/rss.xml"
+    icon = "rss"
+    title = "RSS"
+    weight = 1
+
+[[socials]]
+    id = "email"
+    url = "mailto:kameron.ingrando@gmail.com"
+    icon = "envelope"
+    title = "Email"
+    weight = 2
+
+[[socials]]
+    id = "github"
+    url = "https://github.com/kingrando"
+    icon = "github"
+    title = "GitHub"
+    weight = 3
+
+[[socials]]
+    id = "twitter"
+    url = "https://twitter.com/kameroningrando"
+    icon = "twitter"
+    title = "Twitter"
+    weight = 4
+
+[[socials]]
+    id = "linkedin"
+    url = "https://www.linkedin.com/in/kingrando/"
+    icon = "linkedin"
+    title = "Linkedin"
+    weight = 5
