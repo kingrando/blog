@@ -48,6 +48,9 @@ uglyURLs = false
 [permalinks]
     categories = "/categories/:slug/"
     tags = "/tags/:slug/"
+    notes = "/:section/:year/:month/:day/:title/"
+    posts = "/:section/:year/:month/:day/:title/"
+    useful-resources = "/:section/:title/"
 
 # Taxonomies
 [taxonomies]
@@ -220,8 +223,8 @@ uglyURLs = false
         pre = "internal"
         post = "tags"
     [[menu.main]]
-        url = "/useful-links/"
-        name = "Useful Links"
+        url = "/useful-resources/"
+        name = "Useful Resources"
         weight = 6
         pre = "internal"
         post = "link"
