@@ -1,7 +1,7 @@
 ---
 title: "AZ900 - Core Cloud Services - Introduction to Azure"
 date: 2020-09-09T19:00:00-05:00
-draft: true
+draft: false
 tags:
   - Azure Fundamentals
   - AZ900
